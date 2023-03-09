@@ -1,0 +1,55 @@
+
+decode
+python examples/tacotron2/decode_tacotron2.py \
+  --rootdir ./dump_ljspeech/valid/ \
+  --outdir ./prediction/tacotron2-10k/ \
+  --checkpoint ./examples/tacotron2/exp/train.tacotron2.v1/checkpoints/model-10000.h5 \
+  --config ./examples/tacotron2/conf/tacotron2.v1.yaml \
+  --batch-size 32
+  
+training from scratch
+
+python examples/tacotron2/train_tacotron2.py \
+  --train-dir ./dump_ljspeech/train/ \
+  --dev-dir ./dump_ljspeech/valid/ \
+  --outdir ./examples/tacotron2/exp3/train.tacotron2.v1/ \
+  --config ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml \
+  --use-norm 1 \
+  --mixed_precision 0 \
+  --resume ""
+
+python examples/tacotron2/train_tacotron2.py \
+  --train-dir ./dump_ljspeech/train/ \
+  --dev-dir ./dump_ljspeech/valid/ \
+  --outdir ./examples/tacotron2/exp5/train.tacotron2.v1/ \
+  --config ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml \
+
+ python GA.py   \
+ --train-dir ../dump_ljspeech/train/   \
+ --dev-dir ../dump_ljspeech/valid/   \
+ --outdir ./GA_Output/   \
+ --config ./conf/init_tacotron2.v1.yaml
+
+python GA.py   \
+ --train-dir ../dump_ljspeech/train/   \
+ --dev-dir ../dump_ljspeech/valid/   \
+ --outdir ./GA_Output/test7   \
+ --config ./conf/init_tacotron2.v1.yaml
+
+
+python GA.py   \
+ --train-dir ../dump_ljspeech/train/   \
+ --dev-dir ../dump_ljspeech/valid/   \
+ --outdir ./GA_Output/test9/gen19_elite   \
+ --config ./GA_Output/test9/gen_19/elite.yaml
+
+python examples/tacotron2/train_tacotron2.py \
+  --train-dir ./dump_ljspeech/train/ \
+  --dev-dir ./dump_ljspeech/valid/ \
+  --outdir ./examples/tacotron2/exp3/train.tacotron2.v1/ \
+  --config ./GA/GA_Output/gen19_elite.yaml \
+  --use-norm 1 \
+  --mixed_precision 0 \
+  --resume ""
+
+ python GA.py    --train-dir ../dump_ljspeech/train/    --dev-dir ../dump_ljspeech/valid/    --outdir GA_Output/test    --config ./conf/init_tacotron2.v1.yaml

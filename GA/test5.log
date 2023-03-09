@@ -1,0 +1,2036 @@
+Namespace(train_dir='../dump_ljspeech/train/', dev_dir='../dump_ljspeech/valid/', use_norm=1, outdir='./GA_Output/test5', config='./conf/init_tacotron2.v1.yaml', resume='', verbose=1, mixed_precision=0, pretrained='', use_fal=0)
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': <Creature.Creature object at 0x7f1073c60af0>, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': <Creature.Creature object at 0x7f1073c60e50>, '24e7f76a-908f-11ed-867d-305a3adfd5f9': <Creature.Creature object at 0x7f1073c60970>, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': <Creature.Creature object at 0x7f1073c60bb0>, '24e7f828-908f-11ed-a89f-305a3adfd5f9': <Creature.Creature object at 0x7f1073c60c10>}
+<Population.Population object at 0x7f1073c60b50>
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e6006c-908f-11ed-ae73-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9
+learning_rate: 0.009090014833527017
+2023-01-10 10:33:31,313 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 10:33:31,326 (Creature:166) INFO: allow_cache = True
+2023-01-10 10:33:31,326 (Creature:166) INFO: batch_size = 32
+2023-01-10 10:33:31,326 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 10:33:31,326 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 10:33:31,326 (Creature:166) INFO: format = npy
+2023-01-10 10:33:31,326 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 10:33:31,326 (Creature:166) INFO: hop_size = 256
+2023-01-10 10:33:31,326 (Creature:166) INFO: is_shuffle = True
+2023-01-10 10:33:31,326 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 10:33:31,326 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 10:33:31,326 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 10:33:31,326 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 10:33:31,326 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.009090014833527017, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 10:33:31,326 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 10:33:31,326 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 10:33:31,326 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 10:33:31,326 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 10:33:31,326 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 10:33:31,326 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 10:33:31,326 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 10:33:31,326 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 10:33:31,326 (Creature:166) INFO: var_train_expr = None
+2023-01-10 10:33:31,326 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 10:33:31,326 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 10:33:31,326 (Creature:166) INFO: use_norm = 1
+2023-01-10 10:33:31,327 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9
+2023-01-10 10:33:31,327 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+2023-01-10 10:33:31,327 (Creature:166) INFO: resume = 
+2023-01-10 10:33:31,327 (Creature:166) INFO: verbose = True
+2023-01-10 10:33:31,327 (Creature:166) INFO: mixed_precision = False
+2023-01-10 10:33:31,327 (Creature:166) INFO: pretrained = 
+2023-01-10 10:33:31,327 (Creature:166) INFO: use_fal = False
+2023-01-10 10:33:31,327 (Creature:166) INFO: version = 0.0
+2023-01-10 10:33:31,327 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 10:33:31,327 (Creature:166) INFO: max_char_length = 188
+2023-01-10 10:33:32,028 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 10:39:57,615 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+9.375
+
+(Steps: 100) eval_stop_token_loss = 0.0069.
+(Steps: 100) eval_mel_loss_before = 0.4131.
+(Steps: 100) eval_mel_loss_after = 0.4614.
+(Steps: 100) eval_guided_attention_loss = 0.0027.
+12884901888
+9994043392
+2023-01-10 10:40:59,750 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 10:40:59,753 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0071.
+2023-01-10 10:40:59,754 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.4019.
+2023-01-10 10:40:59,756 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.4516.
+2023-01-10 10:40:59,758 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0030.
+2023-01-10 10:41:00,049 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 10:41:00,161 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0069', 'mel_loss_before': '0.4131', 'mel_loss_after': '0.4614', 'guided_attention_loss': '0.0027', 'memory_usage': '97.4', 'cpu_usage': '22.1', 'gpu_usage': '0.7756398518880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+learning_rate: 0.0006061910578126306
+2023-01-10 10:41:15,842 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 10:41:15,859 (Creature:166) INFO: allow_cache = True
+2023-01-10 10:41:15,859 (Creature:166) INFO: batch_size = 32
+2023-01-10 10:41:15,859 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 10:41:15,859 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 10:41:15,859 (Creature:166) INFO: format = npy
+2023-01-10 10:41:15,859 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 10:41:15,859 (Creature:166) INFO: hop_size = 256
+2023-01-10 10:41:15,859 (Creature:166) INFO: is_shuffle = True
+2023-01-10 10:41:15,859 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 10:41:15,859 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 10:41:15,859 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 10:41:15,859 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 10:41:15,859 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0006061910578126306, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 10:41:15,859 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 10:41:15,859 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 10:41:15,859 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 10:41:15,859 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 10:41:15,859 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 10:41:15,859 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 10:41:15,860 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 10:41:15,860 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 10:41:15,860 (Creature:166) INFO: var_train_expr = None
+2023-01-10 10:41:15,860 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 10:41:15,860 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 10:41:15,860 (Creature:166) INFO: use_norm = 1
+2023-01-10 10:41:15,860 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+2023-01-10 10:41:15,860 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml
+2023-01-10 10:41:15,860 (Creature:166) INFO: resume = 
+2023-01-10 10:41:15,860 (Creature:166) INFO: verbose = True
+2023-01-10 10:41:15,860 (Creature:166) INFO: mixed_precision = False
+2023-01-10 10:41:15,860 (Creature:166) INFO: pretrained = 
+2023-01-10 10:41:15,860 (Creature:166) INFO: use_fal = False
+2023-01-10 10:41:15,860 (Creature:166) INFO: version = 0.0
+2023-01-10 10:41:15,860 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 10:41:15,860 (Creature:166) INFO: max_char_length = 188
+2023-01-10 10:41:16,418 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 10:47:49,879 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+14.75
+
+(Steps: 100) eval_stop_token_loss = 0.0080.
+(Steps: 100) eval_mel_loss_before = 0.2824.
+(Steps: 100) eval_mel_loss_after = 0.3796.
+(Steps: 100) eval_guided_attention_loss = 0.0037.
+12884901888
+9994043392
+2023-01-10 10:48:53,866 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 10:48:53,867 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0077.
+2023-01-10 10:48:53,868 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2854.
+2023-01-10 10:48:53,868 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3829.
+2023-01-10 10:48:53,869 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0035.
+2023-01-10 10:48:54,186 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 10:48:54,393 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0080', 'mel_loss_before': '0.2824', 'mel_loss_after': '0.3796', 'guided_attention_loss': '0.0037', 'memory_usage': '99.0', 'cpu_usage': '22.3', 'gpu_usage': '0.7756398518880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1250.0}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f76a-908f-11ed-867d-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9
+learning_rate: 0.0021923574805649748
+2023-01-10 10:49:09,937 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 10:49:09,950 (Creature:166) INFO: allow_cache = True
+2023-01-10 10:49:09,950 (Creature:166) INFO: batch_size = 32
+2023-01-10 10:49:09,950 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 10:49:09,950 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 10:49:09,950 (Creature:166) INFO: format = npy
+2023-01-10 10:49:09,950 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 10:49:09,950 (Creature:166) INFO: hop_size = 256
+2023-01-10 10:49:09,950 (Creature:166) INFO: is_shuffle = True
+2023-01-10 10:49:09,950 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 10:49:09,950 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 10:49:09,950 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 10:49:09,950 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 10:49:09,951 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0021923574805649748, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 10:49:09,951 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 10:49:09,951 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 10:49:09,951 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 10:49:09,951 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 10:49:09,951 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 10:49:09,951 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 10:49:09,951 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 10:49:09,951 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 10:49:09,951 (Creature:166) INFO: var_train_expr = None
+2023-01-10 10:49:09,951 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 10:49:09,951 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 10:49:09,951 (Creature:166) INFO: use_norm = 1
+2023-01-10 10:49:09,951 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9
+2023-01-10 10:49:09,951 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+2023-01-10 10:49:09,951 (Creature:166) INFO: resume = 
+2023-01-10 10:49:09,951 (Creature:166) INFO: verbose = True
+2023-01-10 10:49:09,951 (Creature:166) INFO: mixed_precision = False
+2023-01-10 10:49:09,951 (Creature:166) INFO: pretrained = 
+2023-01-10 10:49:09,951 (Creature:166) INFO: use_fal = False
+2023-01-10 10:49:09,951 (Creature:166) INFO: version = 0.0
+2023-01-10 10:49:09,951 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 10:49:09,951 (Creature:166) INFO: max_char_length = 188
+2023-01-10 10:49:10,520 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 10:55:57,273 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+19.5
+
+(Steps: 100) eval_stop_token_loss = 0.0078.
+(Steps: 100) eval_mel_loss_before = 0.3266.
+(Steps: 100) eval_mel_loss_after = 0.4202.
+(Steps: 100) eval_guided_attention_loss = 0.0026.
+12884901888
+9994043392
+2023-01-10 10:57:02,631 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 10:57:02,634 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0075.
+2023-01-10 10:57:02,636 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3051.
+2023-01-10 10:57:02,637 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3989.
+2023-01-10 10:57:02,639 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0033.
+2023-01-10 10:57:02,904 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 10:57:03,200 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0078', 'mel_loss_before': '0.3266', 'mel_loss_after': '0.4202', 'guided_attention_loss': '0.0026', 'memory_usage': '98.7', 'cpu_usage': '22.4', 'gpu_usage': '0.7756398518880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1250.0, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1282.051282051282}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 10:57:18,747 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 10:57:18,760 (Creature:166) INFO: allow_cache = True
+2023-01-10 10:57:18,760 (Creature:166) INFO: batch_size = 32
+2023-01-10 10:57:18,760 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 10:57:18,760 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 10:57:18,760 (Creature:166) INFO: format = npy
+2023-01-10 10:57:18,760 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 10:57:18,760 (Creature:166) INFO: hop_size = 256
+2023-01-10 10:57:18,760 (Creature:166) INFO: is_shuffle = True
+2023-01-10 10:57:18,760 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 10:57:18,760 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 10:57:18,760 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 10:57:18,760 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 10:57:18,760 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 10:57:18,760 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 10:57:18,760 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 10:57:18,760 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 10:57:18,760 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 10:57:18,760 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 10:57:18,760 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 10:57:18,761 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 10:57:18,761 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 10:57:18,761 (Creature:166) INFO: var_train_expr = None
+2023-01-10 10:57:18,761 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 10:57:18,761 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 10:57:18,761 (Creature:166) INFO: use_norm = 1
+2023-01-10 10:57:18,761 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+2023-01-10 10:57:18,761 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+2023-01-10 10:57:18,761 (Creature:166) INFO: resume = 
+2023-01-10 10:57:18,761 (Creature:166) INFO: verbose = True
+2023-01-10 10:57:18,761 (Creature:166) INFO: mixed_precision = False
+2023-01-10 10:57:18,761 (Creature:166) INFO: pretrained = 
+2023-01-10 10:57:18,761 (Creature:166) INFO: use_fal = False
+2023-01-10 10:57:18,761 (Creature:166) INFO: version = 0.0
+2023-01-10 10:57:18,761 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 10:57:18,761 (Creature:166) INFO: max_char_length = 188
+2023-01-10 10:57:19,359 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:03:54,251 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+21.25
+
+(Steps: 100) eval_stop_token_loss = 0.0069.
+(Steps: 100) eval_mel_loss_before = 0.3229.
+(Steps: 100) eval_mel_loss_after = 0.3984.
+(Steps: 100) eval_guided_attention_loss = 0.0058.
+12884901888
+12472877056
+2023-01-10 11:05:08,824 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:05:08,827 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0072.
+2023-01-10 11:05:08,829 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3064.
+2023-01-10 11:05:08,830 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3792.
+2023-01-10 11:05:08,832 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0067.
+2023-01-10 11:05:10,010 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:05:10,186 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0069', 'mel_loss_before': '0.3229', 'mel_loss_after': '0.3984', 'guided_attention_loss': '0.0058', 'memory_usage': '98.2', 'cpu_usage': '22.9', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1250.0, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1282.051282051282, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1449.2753623188405}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f828-908f-11ed-a89f-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9
+learning_rate: 5.459569732484182e-05
+2023-01-10 11:05:25,788 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:05:25,802 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:05:25,802 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:05:25,802 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:05:25,802 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:05:25,802 (Creature:166) INFO: format = npy
+2023-01-10 11:05:25,802 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:05:25,802 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:05:25,802 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:05:25,802 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:05:25,802 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:05:25,802 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:05:25,802 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:05:25,802 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 5.459569732484182e-05, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:05:25,802 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:05:25,802 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:05:25,802 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:05:25,802 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:05:25,802 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:05:25,802 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:05:25,802 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:05:25,802 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:05:25,802 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:05:25,802 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:05:25,802 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:05:25,802 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:05:25,802 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9
+2023-01-10 11:05:25,802 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_0/24e7f828-908f-11ed-a89f-305a3adfd5f9/config.yaml
+2023-01-10 11:05:25,802 (Creature:166) INFO: resume = 
+2023-01-10 11:05:25,802 (Creature:166) INFO: verbose = True
+2023-01-10 11:05:25,802 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:05:25,802 (Creature:166) INFO: pretrained = 
+2023-01-10 11:05:25,802 (Creature:166) INFO: use_fal = False
+2023-01-10 11:05:25,802 (Creature:166) INFO: version = 0.0
+2023-01-10 11:05:25,802 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:05:25,802 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:05:26,365 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:12:17,338 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+23.625
+
+(Steps: 100) eval_stop_token_loss = 0.0172.
+(Steps: 100) eval_mel_loss_before = 0.4629.
+(Steps: 100) eval_mel_loss_after = 0.4930.
+(Steps: 100) eval_guided_attention_loss = 0.0057.
+12884901888
+12472877056
+2023-01-10 11:12:27,424 (def_function:150) WARNING: 5 out of the last 5 calls to <bound method Seq2SeqBasedTrainer._one_step_predict of <tacotron2.trainer.Tacotron2Trainer object at 0x7f0edde14670>> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-01-10 11:13:26,267 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:13:26,269 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0168.
+2023-01-10 11:13:26,271 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.4466.
+2023-01-10 11:13:26,272 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.4880.
+2023-01-10 11:13:26,274 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0063.
+2023-01-10 11:13:26,631 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:13:26,887 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0172', 'mel_loss_before': '0.4629', 'mel_loss_after': '0.4930', 'guided_attention_loss': '0.0057', 'memory_usage': '97.5', 'cpu_usage': '21.9', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1250.0, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1282.051282051282, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1449.2753623188405, '24e7f828-908f-11ed-a89f-305a3adfd5f9': 581.3953488372092}
+[6, 9, 0, 2, 4]
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e6006c-908f-11ed-ae73-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9
+learning_rate: 0.009090014833527017
+2023-01-10 11:13:42,483 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:13:42,496 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:13:42,496 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:13:42,496 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:13:42,496 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:13:42,496 (Creature:166) INFO: format = npy
+2023-01-10 11:13:42,496 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:13:42,496 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:13:42,496 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:13:42,496 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:13:42,496 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:13:42,496 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:13:42,496 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:13:42,497 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.009090014833527017, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:13:42,497 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:13:42,497 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:13:42,497 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:13:42,497 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:13:42,497 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:13:42,497 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:13:42,497 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:13:42,497 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:13:42,497 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:13:42,497 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:13:42,497 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:13:42,497 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:13:42,497 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9
+2023-01-10 11:13:42,497 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+2023-01-10 11:13:42,497 (Creature:166) INFO: resume = 
+2023-01-10 11:13:42,497 (Creature:166) INFO: verbose = True
+2023-01-10 11:13:42,497 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:13:42,497 (Creature:166) INFO: pretrained = 
+2023-01-10 11:13:42,497 (Creature:166) INFO: use_fal = False
+2023-01-10 11:13:42,497 (Creature:166) INFO: version = 0.0
+2023-01-10 11:13:42,497 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:13:42,497 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:13:43,101 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:20:19,871 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+24.25
+
+(Steps: 100) eval_stop_token_loss = 0.0065.
+(Steps: 100) eval_mel_loss_before = 0.4170.
+(Steps: 100) eval_mel_loss_after = 0.4481.
+(Steps: 100) eval_guided_attention_loss = 0.0078.
+12884901888
+12472877056
+2023-01-10 11:20:41,079 (def_function:150) WARNING: 6 out of the last 6 calls to <bound method Seq2SeqBasedTrainer._one_step_predict of <tacotron2.trainer.Tacotron2Trainer object at 0x7f10143b7940>> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-01-10 11:21:38,774 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:21:38,777 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0066.
+2023-01-10 11:21:38,778 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.4204.
+2023-01-10 11:21:38,780 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.4512.
+2023-01-10 11:21:38,781 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0082.
+2023-01-10 11:21:39,042 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:21:39,255 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0065', 'mel_loss_before': '0.4170', 'mel_loss_after': '0.4481', 'guided_attention_loss': '0.0078', 'memory_usage': '98.9', 'cpu_usage': '22.2', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1538.4615384615383}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+learning_rate: 0.0006061910578126306
+2023-01-10 11:21:55,143 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:21:55,156 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:21:55,156 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:21:55,156 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:21:55,157 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:21:55,157 (Creature:166) INFO: format = npy
+2023-01-10 11:21:55,157 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:21:55,157 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:21:55,157 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:21:55,157 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:21:55,157 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:21:55,157 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:21:55,157 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:21:55,157 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0006061910578126306, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:21:55,157 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:21:55,157 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:21:55,157 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:21:55,157 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:21:55,157 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:21:55,157 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:21:55,157 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:21:55,157 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:21:55,157 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:21:55,157 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:21:55,157 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:21:55,157 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:21:55,157 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9
+2023-01-10 11:21:55,157 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f6a4-908f-11ed-a3de-305a3adfd5f9/config.yaml
+2023-01-10 11:21:55,157 (Creature:166) INFO: resume = 
+2023-01-10 11:21:55,157 (Creature:166) INFO: verbose = True
+2023-01-10 11:21:55,157 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:21:55,157 (Creature:166) INFO: pretrained = 
+2023-01-10 11:21:55,157 (Creature:166) INFO: use_fal = False
+2023-01-10 11:21:55,157 (Creature:166) INFO: version = 0.0
+2023-01-10 11:21:55,157 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:21:55,157 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:21:55,765 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:28:49,428 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.124999999999996
+
+(Steps: 100) eval_stop_token_loss = 0.0078.
+(Steps: 100) eval_mel_loss_before = 0.3018.
+(Steps: 100) eval_mel_loss_after = 0.4070.
+(Steps: 100) eval_guided_attention_loss = 0.0024.
+12884901888
+12472877056
+2023-01-10 11:29:55,549 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:29:55,552 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0078.
+2023-01-10 11:29:55,553 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2854.
+2023-01-10 11:29:55,555 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3899.
+2023-01-10 11:29:55,557 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0028.
+2023-01-10 11:29:55,942 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:29:56,166 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0078', 'mel_loss_before': '0.3018', 'mel_loss_after': '0.4070', 'guided_attention_loss': '0.0024', 'memory_usage': '98.9', 'cpu_usage': '21.8', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1538.4615384615383, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1282.051282051282}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f76a-908f-11ed-867d-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9
+learning_rate: 0.0021923574805649748
+2023-01-10 11:30:11,659 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:30:11,673 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:30:11,673 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:30:11,673 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:30:11,673 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:30:11,673 (Creature:166) INFO: format = npy
+2023-01-10 11:30:11,673 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:30:11,673 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:30:11,673 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:30:11,673 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:30:11,673 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:30:11,673 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:30:11,673 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:30:11,673 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0021923574805649748, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:30:11,673 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:30:11,673 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:30:11,673 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:30:11,673 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:30:11,673 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:30:11,673 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:30:11,673 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:30:11,673 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:30:11,673 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:30:11,673 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:30:11,673 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:30:11,673 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:30:11,673 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9
+2023-01-10 11:30:11,673 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+2023-01-10 11:30:11,673 (Creature:166) INFO: resume = 
+2023-01-10 11:30:11,673 (Creature:166) INFO: verbose = True
+2023-01-10 11:30:11,673 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:30:11,673 (Creature:166) INFO: pretrained = 
+2023-01-10 11:30:11,673 (Creature:166) INFO: use_fal = False
+2023-01-10 11:30:11,673 (Creature:166) INFO: version = 0.0
+2023-01-10 11:30:11,673 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:30:11,674 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:30:12,264 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:37:10,917 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.75
+
+(Steps: 100) eval_stop_token_loss = 0.0068.
+(Steps: 100) eval_mel_loss_before = 0.3108.
+(Steps: 100) eval_mel_loss_after = 0.3937.
+(Steps: 100) eval_guided_attention_loss = 0.0027.
+12884901888
+12472877056
+2023-01-10 11:38:19,896 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:38:19,899 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0068.
+2023-01-10 11:38:19,901 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3067.
+2023-01-10 11:38:19,902 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3853.
+2023-01-10 11:38:19,904 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0029.
+2023-01-10 11:38:20,271 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:38:20,652 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0068', 'mel_loss_before': '0.3108', 'mel_loss_after': '0.3937', 'guided_attention_loss': '0.0027', 'memory_usage': '98.9', 'cpu_usage': '21.5', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1538.4615384615383, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1282.051282051282, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1470.5882352941176}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 11:38:36,273 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:38:36,287 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:38:36,287 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:38:36,287 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:38:36,287 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:38:36,287 (Creature:166) INFO: format = npy
+2023-01-10 11:38:36,287 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:38:36,287 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:38:36,287 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:38:36,287 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:38:36,287 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:38:36,287 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:38:36,287 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:38:36,287 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:38:36,287 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:38:36,287 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:38:36,287 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:38:36,287 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:38:36,287 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:38:36,287 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:38:36,287 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:38:36,287 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:38:36,287 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:38:36,287 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:38:36,287 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:38:36,288 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:38:36,288 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+2023-01-10 11:38:36,288 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+2023-01-10 11:38:36,288 (Creature:166) INFO: resume = 
+2023-01-10 11:38:36,288 (Creature:166) INFO: verbose = True
+2023-01-10 11:38:36,288 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:38:36,288 (Creature:166) INFO: pretrained = 
+2023-01-10 11:38:36,288 (Creature:166) INFO: use_fal = False
+2023-01-10 11:38:36,288 (Creature:166) INFO: version = 0.0
+2023-01-10 11:38:36,288 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:38:36,288 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:38:36,854 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:45:21,870 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.374999999999996
+
+(Steps: 100) eval_stop_token_loss = 0.0072.
+(Steps: 100) eval_mel_loss_before = 0.3134.
+(Steps: 100) eval_mel_loss_after = 0.3834.
+(Steps: 100) eval_guided_attention_loss = 0.0019.
+12884901888
+12472877056
+2023-01-10 11:46:39,956 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:46:39,959 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0070.
+2023-01-10 11:46:39,960 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2994.
+2023-01-10 11:46:39,962 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3709.
+2023-01-10 11:46:39,964 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0022.
+2023-01-10 11:46:40,246 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:46:40,553 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0072', 'mel_loss_before': '0.3134', 'mel_loss_after': '0.3834', 'guided_attention_loss': '0.0019', 'memory_usage': '98.8', 'cpu_usage': '22.0', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1538.4615384615383, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1282.051282051282, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1470.5882352941176, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1388.888888888889}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 11:46:56,133 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:46:56,147 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:46:56,147 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:46:56,147 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:46:56,147 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:46:56,147 (Creature:166) INFO: format = npy
+2023-01-10 11:46:56,147 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:46:56,147 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:46:56,148 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:46:56,148 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:46:56,148 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:46:56,148 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:46:56,148 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:46:56,148 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:46:56,148 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:46:56,148 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:46:56,148 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:46:56,148 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:46:56,148 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:46:56,148 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:46:56,148 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:46:56,148 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:46:56,148 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:46:56,148 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:46:56,148 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:46:56,148 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:46:56,148 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+2023-01-10 11:46:56,148 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_1/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 11:46:56,148 (Creature:166) INFO: resume = 
+2023-01-10 11:46:56,148 (Creature:166) INFO: verbose = True
+2023-01-10 11:46:56,148 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:46:56,148 (Creature:166) INFO: pretrained = 
+2023-01-10 11:46:56,148 (Creature:166) INFO: use_fal = False
+2023-01-10 11:46:56,148 (Creature:166) INFO: version = 0.0
+2023-01-10 11:46:56,148 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:46:56,148 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:46:56,806 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 11:53:59,488 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.25
+
+(Steps: 100) eval_stop_token_loss = 0.0067.
+(Steps: 100) eval_mel_loss_before = 0.2836.
+(Steps: 100) eval_mel_loss_after = 0.3555.
+(Steps: 100) eval_guided_attention_loss = 0.0035.
+12884901888
+12472877056
+2023-01-10 11:55:06,242 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 11:55:06,245 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0068.
+2023-01-10 11:55:06,247 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3029.
+2023-01-10 11:55:06,248 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3776.
+2023-01-10 11:55:06,250 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0033.
+2023-01-10 11:55:06,683 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 11:55:07,051 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0067', 'mel_loss_before': '0.2836', 'mel_loss_after': '0.3555', 'guided_attention_loss': '0.0035', 'memory_usage': '98.9', 'cpu_usage': '21.1', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1538.4615384615383, '24e7f6a4-908f-11ed-a3de-305a3adfd5f9': 1282.051282051282, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1470.5882352941176, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1388.888888888889, 'bffcdf4e-9094-11ed-9f19-305a3adfd5f9': 1492.5373134328358}
+[6, 9, 0, 2, 4]
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e6006c-908f-11ed-ae73-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9
+learning_rate: 0.009090014833527017
+2023-01-10 11:55:22,573 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 11:55:22,587 (Creature:166) INFO: allow_cache = True
+2023-01-10 11:55:22,587 (Creature:166) INFO: batch_size = 32
+2023-01-10 11:55:22,587 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 11:55:22,587 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 11:55:22,587 (Creature:166) INFO: format = npy
+2023-01-10 11:55:22,587 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 11:55:22,587 (Creature:166) INFO: hop_size = 256
+2023-01-10 11:55:22,587 (Creature:166) INFO: is_shuffle = True
+2023-01-10 11:55:22,587 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 11:55:22,587 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 11:55:22,587 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 11:55:22,587 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 11:55:22,587 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.009090014833527017, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 11:55:22,587 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 11:55:22,587 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 11:55:22,587 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 11:55:22,587 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 11:55:22,587 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 11:55:22,587 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 11:55:22,587 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 11:55:22,587 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 11:55:22,587 (Creature:166) INFO: var_train_expr = None
+2023-01-10 11:55:22,587 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 11:55:22,587 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 11:55:22,587 (Creature:166) INFO: use_norm = 1
+2023-01-10 11:55:22,587 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9
+2023-01-10 11:55:22,587 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+2023-01-10 11:55:22,587 (Creature:166) INFO: resume = 
+2023-01-10 11:55:22,587 (Creature:166) INFO: verbose = True
+2023-01-10 11:55:22,587 (Creature:166) INFO: mixed_precision = False
+2023-01-10 11:55:22,587 (Creature:166) INFO: pretrained = 
+2023-01-10 11:55:22,587 (Creature:166) INFO: use_fal = False
+2023-01-10 11:55:22,587 (Creature:166) INFO: version = 0.0
+2023-01-10 11:55:22,587 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 11:55:22,587 (Creature:166) INFO: max_char_length = 188
+2023-01-10 11:55:23,205 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:02:24,874 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.0
+
+(Steps: 100) eval_stop_token_loss = 0.0069.
+(Steps: 100) eval_mel_loss_before = 0.3981.
+(Steps: 100) eval_mel_loss_after = 0.4342.
+(Steps: 100) eval_guided_attention_loss = 0.0019.
+12884901888
+12472877056
+2023-01-10 12:03:30,462 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:03:30,465 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0071.
+2023-01-10 12:03:30,466 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3613.
+2023-01-10 12:03:30,468 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3981.
+2023-01-10 12:03:30,469 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0022.
+2023-01-10 12:03:30,811 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:03:31,078 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0069', 'mel_loss_before': '0.3981', 'mel_loss_after': '0.4342', 'guided_attention_loss': '0.0019', 'memory_usage': '98.8', 'cpu_usage': '21.5', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f76a-908f-11ed-867d-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9
+learning_rate: 0.0021923574805649748
+2023-01-10 12:03:46,759 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:03:46,772 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:03:46,772 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:03:46,773 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:03:46,773 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:03:46,773 (Creature:166) INFO: format = npy
+2023-01-10 12:03:46,773 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:03:46,773 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:03:46,773 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:03:46,773 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:03:46,773 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:03:46,773 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:03:46,773 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:03:46,773 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0021923574805649748, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:03:46,773 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:03:46,773 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:03:46,773 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:03:46,773 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:03:46,773 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:03:46,773 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:03:46,773 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:03:46,773 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:03:46,773 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:03:46,773 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:03:46,773 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:03:46,773 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:03:46,773 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9
+2023-01-10 12:03:46,773 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+2023-01-10 12:03:46,773 (Creature:166) INFO: resume = 
+2023-01-10 12:03:46,773 (Creature:166) INFO: verbose = True
+2023-01-10 12:03:46,773 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:03:46,773 (Creature:166) INFO: pretrained = 
+2023-01-10 12:03:46,773 (Creature:166) INFO: use_fal = False
+2023-01-10 12:03:46,773 (Creature:166) INFO: version = 0.0
+2023-01-10 12:03:46,773 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:03:46,773 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:03:47,362 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:10:55,408 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.25
+
+(Steps: 100) eval_stop_token_loss = 0.0076.
+(Steps: 100) eval_mel_loss_before = 0.2950.
+(Steps: 100) eval_mel_loss_after = 0.3711.
+(Steps: 100) eval_guided_attention_loss = 0.0014.
+12884901888
+12472877056
+2023-01-10 12:12:05,034 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:12:05,038 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0075.
+2023-01-10 12:12:05,040 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2976.
+2023-01-10 12:12:05,043 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3738.
+2023-01-10 12:12:05,045 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0012.
+2023-01-10 12:12:05,324 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:12:05,702 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0076', 'mel_loss_before': '0.2950', 'mel_loss_after': '0.3711', 'guided_attention_loss': '0.0014', 'memory_usage': '97.7', 'cpu_usage': '21.4', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1315.7894736842104}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 12:12:21,319 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:12:21,344 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:12:21,344 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:12:21,344 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:12:21,344 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:12:21,344 (Creature:166) INFO: format = npy
+2023-01-10 12:12:21,344 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:12:21,344 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:12:21,344 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:12:21,344 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:12:21,345 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:12:21,345 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:12:21,345 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:12:21,345 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:12:21,345 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:12:21,345 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:12:21,345 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:12:21,345 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:12:21,345 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:12:21,345 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:12:21,345 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:12:21,345 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:12:21,345 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:12:21,345 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:12:21,345 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:12:21,345 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:12:21,345 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+2023-01-10 12:12:21,345 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+2023-01-10 12:12:21,345 (Creature:166) INFO: resume = 
+2023-01-10 12:12:21,345 (Creature:166) INFO: verbose = True
+2023-01-10 12:12:21,346 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:12:21,346 (Creature:166) INFO: pretrained = 
+2023-01-10 12:12:21,346 (Creature:166) INFO: use_fal = False
+2023-01-10 12:12:21,346 (Creature:166) INFO: version = 0.0
+2023-01-10 12:12:21,346 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:12:21,346 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:12:21,943 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:19:05,471 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.75
+
+(Steps: 100) eval_stop_token_loss = 0.0075.
+(Steps: 100) eval_mel_loss_before = 0.2866.
+(Steps: 100) eval_mel_loss_after = 0.3600.
+(Steps: 100) eval_guided_attention_loss = 0.0022.
+12884901888
+12472877056
+2023-01-10 12:20:18,693 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:20:18,696 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0075.
+2023-01-10 12:20:18,698 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2975.
+2023-01-10 12:20:18,699 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3726.
+2023-01-10 12:20:18,701 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0017.
+2023-01-10 12:20:18,997 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:20:19,296 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0075', 'mel_loss_before': '0.2866', 'mel_loss_after': '0.3600', 'guided_attention_loss': '0.0022', 'memory_usage': '98.8', 'cpu_usage': '22.1', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1315.7894736842104, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1333.3333333333335}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 12:20:34,586 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:20:34,600 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:20:34,600 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:20:34,600 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:20:34,600 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:20:34,600 (Creature:166) INFO: format = npy
+2023-01-10 12:20:34,600 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:20:34,600 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:20:34,600 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:20:34,600 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:20:34,600 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:20:34,600 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:20:34,600 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:20:34,600 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:20:34,600 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:20:34,600 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:20:34,600 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:20:34,600 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:20:34,600 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:20:34,600 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:20:34,600 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:20:34,600 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:20:34,600 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:20:34,601 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:20:34,601 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:20:34,601 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:20:34,601 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9
+2023-01-10 12:20:34,601 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/bffcdf4e-9094-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 12:20:34,601 (Creature:166) INFO: resume = 
+2023-01-10 12:20:34,601 (Creature:166) INFO: verbose = True
+2023-01-10 12:20:34,601 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:20:34,601 (Creature:166) INFO: pretrained = 
+2023-01-10 12:20:34,601 (Creature:166) INFO: use_fal = False
+2023-01-10 12:20:34,601 (Creature:166) INFO: version = 0.0
+2023-01-10 12:20:34,601 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:20:34,601 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:20:35,223 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:27:43,006 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.0
+
+(Steps: 100) eval_stop_token_loss = 0.0078.
+(Steps: 100) eval_mel_loss_before = 0.2960.
+(Steps: 100) eval_mel_loss_after = 0.3695.
+(Steps: 100) eval_guided_attention_loss = 0.0038.
+12884901888
+12472877056
+2023-01-10 12:28:50,399 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:28:50,402 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0078.
+2023-01-10 12:28:50,403 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3026.
+2023-01-10 12:28:50,405 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3792.
+2023-01-10 12:28:50,407 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0039.
+2023-01-10 12:28:50,707 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:28:51,108 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0078', 'mel_loss_before': '0.2960', 'mel_loss_after': '0.3695', 'guided_attention_loss': '0.0038', 'memory_usage': '99.0', 'cpu_usage': '21.6', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1315.7894736842104, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1333.3333333333335, 'bffcdf4e-9094-11ed-9f19-305a3adfd5f9': 1282.051282051282}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 9233dc5b-909a-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 12:29:06,681 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:29:06,695 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:29:06,695 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:29:06,695 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:29:06,695 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:29:06,695 (Creature:166) INFO: format = npy
+2023-01-10 12:29:06,695 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:29:06,696 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:29:06,696 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:29:06,696 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:29:06,696 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:29:06,696 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:29:06,696 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:29:06,696 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:29:06,696 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:29:06,696 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:29:06,696 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:29:06,696 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:29:06,696 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:29:06,696 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:29:06,696 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:29:06,696 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:29:06,696 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:29:06,696 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:29:06,696 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:29:06,696 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:29:06,696 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+2023-01-10 12:29:06,696 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_2/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 12:29:06,696 (Creature:166) INFO: resume = 
+2023-01-10 12:29:06,696 (Creature:166) INFO: verbose = True
+2023-01-10 12:29:06,696 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:29:06,696 (Creature:166) INFO: pretrained = 
+2023-01-10 12:29:06,696 (Creature:166) INFO: use_fal = False
+2023-01-10 12:29:06,696 (Creature:166) INFO: version = 0.0
+2023-01-10 12:29:06,696 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:29:06,696 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:29:07,309 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:35:56,296 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.875
+
+(Steps: 100) eval_stop_token_loss = 0.0077.
+(Steps: 100) eval_mel_loss_before = 0.3290.
+(Steps: 100) eval_mel_loss_after = 0.4145.
+(Steps: 100) eval_guided_attention_loss = 0.0014.
+12884901888
+12472877056
+2023-01-10 12:37:17,753 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:37:17,757 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0074.
+2023-01-10 12:37:17,758 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3069.
+2023-01-10 12:37:17,760 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3954.
+2023-01-10 12:37:17,762 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0016.
+2023-01-10 12:37:18,002 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:37:18,358 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0077', 'mel_loss_before': '0.3290', 'mel_loss_after': '0.4145', 'guided_attention_loss': '0.0014', 'memory_usage': '98.8', 'cpu_usage': '21.8', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 1449.2753623188405, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1315.7894736842104, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1333.3333333333335, 'bffcdf4e-9094-11ed-9f19-305a3adfd5f9': 1282.051282051282, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1298.7012987012986}
+[6, 9, 0, 2, 4]
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e6006c-908f-11ed-ae73-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9
+learning_rate: 0.009090014833527017
+2023-01-10 12:37:34,105 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:37:34,120 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:37:34,120 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:37:34,120 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:37:34,120 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:37:34,120 (Creature:166) INFO: format = npy
+2023-01-10 12:37:34,120 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:37:34,120 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:37:34,120 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:37:34,120 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:37:34,120 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:37:34,120 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:37:34,120 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:37:34,120 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.009090014833527017, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:37:34,120 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:37:34,120 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:37:34,120 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:37:34,120 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:37:34,120 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:37:34,120 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:37:34,120 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:37:34,120 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:37:34,120 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:37:34,120 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:37:34,120 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:37:34,120 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:37:34,120 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9
+2023-01-10 12:37:34,120 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e6006c-908f-11ed-ae73-305a3adfd5f9/config.yaml
+2023-01-10 12:37:34,120 (Creature:166) INFO: resume = 
+2023-01-10 12:37:34,121 (Creature:166) INFO: verbose = True
+2023-01-10 12:37:34,121 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:37:34,121 (Creature:166) INFO: pretrained = 
+2023-01-10 12:37:34,121 (Creature:166) INFO: use_fal = False
+2023-01-10 12:37:34,121 (Creature:166) INFO: version = 0.0
+2023-01-10 12:37:34,121 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:37:34,121 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:37:34,733 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:44:28,011 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.624999999999996
+
+(Steps: 100) eval_stop_token_loss = 0.0132.
+(Steps: 100) eval_mel_loss_before = 0.3467.
+(Steps: 100) eval_mel_loss_after = 0.3876.
+(Steps: 100) eval_guided_attention_loss = 0.0017.
+12884901888
+12472877056
+2023-01-10 12:45:54,247 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:45:54,249 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0111.
+2023-01-10 12:45:54,251 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3662.
+2023-01-10 12:45:54,252 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.4067.
+2023-01-10 12:45:54,253 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0017.
+2023-01-10 12:45:54,597 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:45:54,823 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0132', 'mel_loss_before': '0.3467', 'mel_loss_after': '0.3876', 'guided_attention_loss': '0.0017', 'memory_usage': '98.7', 'cpu_usage': '21.5', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 757.5757575757576}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f76a-908f-11ed-867d-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9
+learning_rate: 0.0021923574805649748
+2023-01-10 12:46:10,446 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:46:10,461 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:46:10,461 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:46:10,461 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:46:10,461 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:46:10,461 (Creature:166) INFO: format = npy
+2023-01-10 12:46:10,461 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:46:10,461 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:46:10,461 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:46:10,461 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:46:10,461 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:46:10,461 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:46:10,461 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:46:10,461 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0021923574805649748, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:46:10,461 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:46:10,461 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:46:10,461 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:46:10,461 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:46:10,461 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:46:10,461 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:46:10,461 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:46:10,461 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:46:10,461 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:46:10,461 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:46:10,461 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:46:10,461 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:46:10,461 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9
+2023-01-10 12:46:10,461 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+2023-01-10 12:46:10,461 (Creature:166) INFO: resume = 
+2023-01-10 12:46:10,461 (Creature:166) INFO: verbose = True
+2023-01-10 12:46:10,461 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:46:10,461 (Creature:166) INFO: pretrained = 
+2023-01-10 12:46:10,461 (Creature:166) INFO: use_fal = False
+2023-01-10 12:46:10,462 (Creature:166) INFO: version = 0.0
+2023-01-10 12:46:10,462 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:46:10,462 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:46:11,140 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 12:53:15,839 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.0
+
+(Steps: 100) eval_stop_token_loss = 0.0079.
+(Steps: 100) eval_mel_loss_before = 0.3278.
+(Steps: 100) eval_mel_loss_after = 0.4251.
+(Steps: 100) eval_guided_attention_loss = 0.0017.
+12884901888
+12472877056
+2023-01-10 12:54:22,763 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 12:54:22,767 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0077.
+2023-01-10 12:54:22,768 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3134.
+2023-01-10 12:54:22,770 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3985.
+2023-01-10 12:54:22,771 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0016.
+2023-01-10 12:54:23,277 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 12:54:23,632 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0079', 'mel_loss_before': '0.3278', 'mel_loss_after': '0.4251', 'guided_attention_loss': '0.0017', 'memory_usage': '98.7', 'cpu_usage': '20.9', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 757.5757575757576, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1265.8227848101264}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 12:54:39,169 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 12:54:39,182 (Creature:166) INFO: allow_cache = True
+2023-01-10 12:54:39,182 (Creature:166) INFO: batch_size = 32
+2023-01-10 12:54:39,182 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 12:54:39,182 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 12:54:39,182 (Creature:166) INFO: format = npy
+2023-01-10 12:54:39,182 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 12:54:39,182 (Creature:166) INFO: hop_size = 256
+2023-01-10 12:54:39,182 (Creature:166) INFO: is_shuffle = True
+2023-01-10 12:54:39,182 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 12:54:39,182 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 12:54:39,182 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 12:54:39,182 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 12:54:39,182 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 12:54:39,182 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 12:54:39,182 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 12:54:39,182 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 12:54:39,182 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 12:54:39,182 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 12:54:39,182 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 12:54:39,182 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 12:54:39,183 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 12:54:39,183 (Creature:166) INFO: var_train_expr = None
+2023-01-10 12:54:39,183 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 12:54:39,183 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 12:54:39,183 (Creature:166) INFO: use_norm = 1
+2023-01-10 12:54:39,183 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+2023-01-10 12:54:39,183 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+2023-01-10 12:54:39,183 (Creature:166) INFO: resume = 
+2023-01-10 12:54:39,183 (Creature:166) INFO: verbose = True
+2023-01-10 12:54:39,183 (Creature:166) INFO: mixed_precision = False
+2023-01-10 12:54:39,183 (Creature:166) INFO: pretrained = 
+2023-01-10 12:54:39,183 (Creature:166) INFO: use_fal = False
+2023-01-10 12:54:39,183 (Creature:166) INFO: version = 0.0
+2023-01-10 12:54:39,183 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 12:54:39,183 (Creature:166) INFO: max_char_length = 188
+2023-01-10 12:54:39,744 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:01:29,592 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+24.875
+
+(Steps: 100) eval_stop_token_loss = 0.0078.
+(Steps: 100) eval_mel_loss_before = 0.3314.
+(Steps: 100) eval_mel_loss_after = 0.4196.
+(Steps: 100) eval_guided_attention_loss = 0.0025.
+12884901888
+12472877056
+2023-01-10 13:02:56,953 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:02:56,957 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0077.
+2023-01-10 13:02:56,959 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3123.
+2023-01-10 13:02:56,960 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3990.
+2023-01-10 13:02:56,962 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0028.
+2023-01-10 13:02:57,275 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:02:57,713 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0078', 'mel_loss_before': '0.3314', 'mel_loss_after': '0.4196', 'guided_attention_loss': '0.0025', 'memory_usage': '98.8', 'cpu_usage': '21.8', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 757.5757575757576, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1265.8227848101264, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1282.051282051282}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 9233dc5b-909a-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 13:03:13,471 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:03:13,487 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:03:13,487 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:03:13,487 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:03:13,487 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:03:13,487 (Creature:166) INFO: format = npy
+2023-01-10 13:03:13,487 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:03:13,487 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:03:13,487 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:03:13,487 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:03:13,487 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:03:13,487 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:03:13,487 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:03:13,487 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:03:13,487 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:03:13,487 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:03:13,487 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:03:13,487 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:03:13,487 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:03:13,487 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:03:13,487 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:03:13,487 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:03:13,487 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:03:13,487 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:03:13,487 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:03:13,487 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:03:13,488 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+2023-01-10 13:03:13,488 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 13:03:13,488 (Creature:166) INFO: resume = 
+2023-01-10 13:03:13,488 (Creature:166) INFO: verbose = True
+2023-01-10 13:03:13,488 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:03:13,488 (Creature:166) INFO: pretrained = 
+2023-01-10 13:03:13,488 (Creature:166) INFO: use_fal = False
+2023-01-10 13:03:13,488 (Creature:166) INFO: version = 0.0
+2023-01-10 13:03:13,488 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:03:13,488 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:03:14,073 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:10:07,066 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+23.25
+
+(Steps: 100) eval_stop_token_loss = 0.0077.
+(Steps: 100) eval_mel_loss_before = 0.3120.
+(Steps: 100) eval_mel_loss_after = 0.3971.
+(Steps: 100) eval_guided_attention_loss = 0.0031.
+12884901888
+12472877056
+2023-01-10 13:11:31,513 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:11:31,515 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0075.
+2023-01-10 13:11:31,515 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3061.
+2023-01-10 13:11:31,516 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3963.
+2023-01-10 13:11:31,517 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0033.
+2023-01-10 13:11:32,520 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:11:32,797 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0077', 'mel_loss_before': '0.3120', 'mel_loss_after': '0.3971', 'guided_attention_loss': '0.0031', 'memory_usage': '99.0', 'cpu_usage': '20.8', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 757.5757575757576, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1265.8227848101264, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1282.051282051282, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1298.7012987012986}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 76fb0389-90a0-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 13:11:48,463 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:11:48,476 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:11:48,476 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:11:48,476 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:11:48,476 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:11:48,476 (Creature:166) INFO: format = npy
+2023-01-10 13:11:48,476 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:11:48,476 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:11:48,476 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:11:48,476 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:11:48,476 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:11:48,476 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:11:48,476 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:11:48,476 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:11:48,476 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:11:48,476 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:11:48,476 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:11:48,476 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:11:48,476 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:11:48,476 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:11:48,476 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:11:48,476 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:11:48,476 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:11:48,477 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:11:48,477 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:11:48,477 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:11:48,477 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+2023-01-10 13:11:48,477 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_3/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 13:11:48,477 (Creature:166) INFO: resume = 
+2023-01-10 13:11:48,477 (Creature:166) INFO: verbose = True
+2023-01-10 13:11:48,477 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:11:48,477 (Creature:166) INFO: pretrained = 
+2023-01-10 13:11:48,477 (Creature:166) INFO: use_fal = False
+2023-01-10 13:11:48,477 (Creature:166) INFO: version = 0.0
+2023-01-10 13:11:48,477 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:11:48,477 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:11:49,320 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:19:14,636 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+24.625
+
+(Steps: 100) eval_stop_token_loss = 0.0071.
+(Steps: 100) eval_mel_loss_before = 0.2852.
+(Steps: 100) eval_mel_loss_after = 0.3632.
+(Steps: 100) eval_guided_attention_loss = 0.0046.
+12884901888
+12472877056
+2023-01-10 13:20:24,197 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:20:24,200 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0072.
+2023-01-10 13:20:24,201 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3067.
+2023-01-10 13:20:24,203 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3828.
+2023-01-10 13:20:24,204 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0045.
+2023-01-10 13:20:25,235 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:20:28,054 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0071', 'mel_loss_before': '0.2852', 'mel_loss_after': '0.3632', 'guided_attention_loss': '0.0046', 'memory_usage': '98.5', 'cpu_usage': '21.2', 'gpu_usage': '0.9680226643880209'}
+{'24e6006c-908f-11ed-ae73-305a3adfd5f9': 757.5757575757576, '24e7f76a-908f-11ed-867d-305a3adfd5f9': 1265.8227848101264, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1282.051282051282, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1298.7012987012986, '76fb0389-90a0-11ed-9f19-305a3adfd5f9': 1408.450704225352}
+[6, 9, 0, 2, 4]
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f76a-908f-11ed-867d-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9
+learning_rate: 0.0021923574805649748
+2023-01-10 13:20:44,452 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:20:44,470 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:20:44,470 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:20:44,470 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:20:44,470 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:20:44,470 (Creature:166) INFO: format = npy
+2023-01-10 13:20:44,470 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:20:44,470 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:20:44,470 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:20:44,470 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:20:44,470 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:20:44,470 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:20:44,470 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:20:44,470 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0021923574805649748, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:20:44,470 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:20:44,470 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:20:44,470 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:20:44,470 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:20:44,470 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:20:44,470 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:20:44,471 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:20:44,471 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:20:44,471 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:20:44,471 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:20:44,471 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:20:44,471 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:20:44,471 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9
+2023-01-10 13:20:44,471 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f76a-908f-11ed-867d-305a3adfd5f9/config.yaml
+2023-01-10 13:20:44,471 (Creature:166) INFO: resume = 
+2023-01-10 13:20:44,471 (Creature:166) INFO: verbose = True
+2023-01-10 13:20:44,471 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:20:44,471 (Creature:166) INFO: pretrained = 
+2023-01-10 13:20:44,471 (Creature:166) INFO: use_fal = False
+2023-01-10 13:20:44,471 (Creature:166) INFO: version = 0.0
+2023-01-10 13:20:44,471 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:20:44,471 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:20:45,206 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:27:38,036 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.5
+
+(Steps: 100) eval_stop_token_loss = 0.0070.
+(Steps: 100) eval_mel_loss_before = 0.3101.
+(Steps: 100) eval_mel_loss_after = 0.3821.
+(Steps: 100) eval_guided_attention_loss = 0.0013.
+12884901888
+12472877056
+2023-01-10 13:29:09,724 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:29:09,728 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0067.
+2023-01-10 13:29:09,730 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3045.
+2023-01-10 13:29:09,731 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3819.
+2023-01-10 13:29:09,733 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0014.
+2023-01-10 13:29:10,446 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:29:10,721 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0070', 'mel_loss_before': '0.3101', 'mel_loss_after': '0.3821', 'guided_attention_loss': '0.0013', 'memory_usage': '98.7', 'cpu_usage': '21.6', 'gpu_usage': '0.9680226643880209'}
+{'24e7f76a-908f-11ed-867d-305a3adfd5f9': 1428.5714285714287}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 13:29:26,345 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:29:26,360 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:29:26,360 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:29:26,360 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:29:26,360 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:29:26,360 (Creature:166) INFO: format = npy
+2023-01-10 13:29:26,360 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:29:26,360 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:29:26,360 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:29:26,360 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:29:26,360 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:29:26,360 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:29:26,360 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:29:26,360 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:29:26,360 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:29:26,360 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:29:26,360 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:29:26,360 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:29:26,360 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:29:26,360 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:29:26,360 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:29:26,360 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:29:26,360 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:29:26,360 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:29:26,360 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:29:26,360 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:29:26,360 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9
+2023-01-10 13:29:26,360 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/24e7f7ca-908f-11ed-bfe5-305a3adfd5f9/config.yaml
+2023-01-10 13:29:26,360 (Creature:166) INFO: resume = 
+2023-01-10 13:29:26,360 (Creature:166) INFO: verbose = True
+2023-01-10 13:29:26,360 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:29:26,360 (Creature:166) INFO: pretrained = 
+2023-01-10 13:29:26,360 (Creature:166) INFO: use_fal = False
+2023-01-10 13:29:26,360 (Creature:166) INFO: version = 0.0
+2023-01-10 13:29:26,360 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:29:26,361 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:29:27,105 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:38:01,242 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.375
+
+(Steps: 100) eval_stop_token_loss = 0.0070.
+(Steps: 100) eval_mel_loss_before = 0.3053.
+(Steps: 100) eval_mel_loss_after = 0.3849.
+(Steps: 100) eval_guided_attention_loss = 0.0032.
+12884901888
+12472877056
+2023-01-10 13:39:51,669 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:39:51,672 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0070.
+2023-01-10 13:39:51,674 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3054.
+2023-01-10 13:39:51,676 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3885.
+2023-01-10 13:39:51,677 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0030.
+2023-01-10 13:39:52,682 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:39:56,008 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0070', 'mel_loss_before': '0.3053', 'mel_loss_after': '0.3849', 'guided_attention_loss': '0.0032', 'memory_usage': '98.9', 'cpu_usage': '19.5', 'gpu_usage': '0.9680226643880209'}
+{'24e7f76a-908f-11ed-867d-305a3adfd5f9': 1428.5714285714287, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1428.5714285714287}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 9233dc5b-909a-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 13:40:12,240 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:40:12,255 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:40:12,255 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:40:12,255 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:40:12,255 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:40:12,255 (Creature:166) INFO: format = npy
+2023-01-10 13:40:12,255 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:40:12,255 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:40:12,255 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:40:12,255 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:40:12,255 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:40:12,255 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:40:12,255 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:40:12,255 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:40:12,255 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:40:12,255 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:40:12,255 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:40:12,255 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:40:12,255 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:40:12,255 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:40:12,255 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:40:12,255 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:40:12,255 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:40:12,255 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:40:12,255 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:40:12,255 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:40:12,255 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9
+2023-01-10 13:40:12,255 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/9233dc5b-909a-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 13:40:12,255 (Creature:166) INFO: resume = 
+2023-01-10 13:40:12,255 (Creature:166) INFO: verbose = True
+2023-01-10 13:40:12,255 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:40:12,255 (Creature:166) INFO: pretrained = 
+2023-01-10 13:40:12,255 (Creature:166) INFO: use_fal = False
+2023-01-10 13:40:12,255 (Creature:166) INFO: version = 0.0
+2023-01-10 13:40:12,256 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:40:12,256 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:40:12,836 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:47:51,989 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.75
+
+(Steps: 100) eval_stop_token_loss = 0.0075.
+(Steps: 100) eval_mel_loss_before = 0.3128.
+(Steps: 100) eval_mel_loss_after = 0.3888.
+(Steps: 100) eval_guided_attention_loss = 0.0024.
+12884901888
+12472877056
+2023-01-10 13:49:01,132 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 13:49:01,135 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0074.
+2023-01-10 13:49:01,137 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.2969.
+2023-01-10 13:49:01,138 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3713.
+2023-01-10 13:49:01,140 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0027.
+2023-01-10 13:49:02,710 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 13:49:04,722 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0075', 'mel_loss_before': '0.3128', 'mel_loss_after': '0.3888', 'guided_attention_loss': '0.0024', 'memory_usage': '98.8', 'cpu_usage': '19.7', 'gpu_usage': '0.9680226643880209'}
+{'24e7f76a-908f-11ed-867d-305a3adfd5f9': 1428.5714285714287, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1428.5714285714287, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1333.3333333333335}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 76fb0389-90a0-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 13:49:21,380 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 13:49:21,394 (Creature:166) INFO: allow_cache = True
+2023-01-10 13:49:21,394 (Creature:166) INFO: batch_size = 32
+2023-01-10 13:49:21,394 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 13:49:21,394 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 13:49:21,394 (Creature:166) INFO: format = npy
+2023-01-10 13:49:21,394 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 13:49:21,394 (Creature:166) INFO: hop_size = 256
+2023-01-10 13:49:21,394 (Creature:166) INFO: is_shuffle = True
+2023-01-10 13:49:21,394 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 13:49:21,394 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 13:49:21,394 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 13:49:21,394 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 13:49:21,394 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 13:49:21,394 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 13:49:21,394 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 13:49:21,394 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 13:49:21,394 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 13:49:21,394 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 13:49:21,394 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 13:49:21,394 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 13:49:21,394 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 13:49:21,394 (Creature:166) INFO: var_train_expr = None
+2023-01-10 13:49:21,394 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 13:49:21,394 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 13:49:21,394 (Creature:166) INFO: use_norm = 1
+2023-01-10 13:49:21,394 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9
+2023-01-10 13:49:21,394 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/76fb0389-90a0-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 13:49:21,394 (Creature:166) INFO: resume = 
+2023-01-10 13:49:21,394 (Creature:166) INFO: verbose = True
+2023-01-10 13:49:21,394 (Creature:166) INFO: mixed_precision = False
+2023-01-10 13:49:21,394 (Creature:166) INFO: pretrained = 
+2023-01-10 13:49:21,394 (Creature:166) INFO: use_fal = False
+2023-01-10 13:49:21,394 (Creature:166) INFO: version = 0.0
+2023-01-10 13:49:21,394 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 13:49:21,394 (Creature:166) INFO: max_char_length = 188
+2023-01-10 13:49:22,104 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 13:59:12,259 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+26.75
+
+(Steps: 100) eval_stop_token_loss = 0.0079.
+(Steps: 100) eval_mel_loss_before = 0.3111.
+(Steps: 100) eval_mel_loss_after = 0.3997.
+(Steps: 100) eval_guided_attention_loss = 0.0039.
+12884901888
+12472877056
+2023-01-10 14:00:05,804 (def_function:150) WARNING: 5 out of the last 23 calls to <bound method Seq2SeqBasedTrainer._one_step_evaluate of <tacotron2.trainer.Tacotron2Trainer object at 0x7f10145a36a0>> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-01-10 14:00:32,149 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 14:00:32,152 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0076.
+2023-01-10 14:00:32,154 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3094.
+2023-01-10 14:00:32,155 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3949.
+2023-01-10 14:00:32,157 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0041.
+2023-01-10 14:00:34,022 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 14:00:39,612 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0079', 'mel_loss_before': '0.3111', 'mel_loss_after': '0.3997', 'guided_attention_loss': '0.0039', 'memory_usage': '99.1', 'cpu_usage': '18.7', 'gpu_usage': '0.9680226643880209'}
+{'24e7f76a-908f-11ed-867d-305a3adfd5f9': 1428.5714285714287, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1428.5714285714287, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1333.3333333333335, '76fb0389-90a0-11ed-9f19-305a3adfd5f9': 1265.8227848101264}
+create /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9
+/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9
+{'train_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/', 'dev_dir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/', 'use_norm': 1, 'outdir': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9', 'config': '/home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9/config.yaml', 'resume': '', 'verbose': 1, 'mixed_precision': 0, 'pretrained': '', 'use_fal': 0}
+Train: 7e8efb3f-90a6-11ed-9f19-305a3adfd5f9
+Config: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9/config.yaml
+Output: /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9
+learning_rate: 0.0024842781420265567
+2023-01-10 14:00:56,273 (tacotron_dataset:93) INFO: Using guided attention loss
+2023-01-10 14:00:56,287 (Creature:166) INFO: allow_cache = True
+2023-01-10 14:00:56,287 (Creature:166) INFO: batch_size = 32
+2023-01-10 14:00:56,287 (Creature:166) INFO: end_ratio_value = 0.0
+2023-01-10 14:00:56,287 (Creature:166) INFO: eval_interval_steps = 100
+2023-01-10 14:00:56,287 (Creature:166) INFO: format = npy
+2023-01-10 14:00:56,287 (Creature:166) INFO: gradient_accumulation_steps = 1
+2023-01-10 14:00:56,287 (Creature:166) INFO: hop_size = 256
+2023-01-10 14:00:56,287 (Creature:166) INFO: is_shuffle = True
+2023-01-10 14:00:56,287 (Creature:166) INFO: log_interval_steps = 200
+2023-01-10 14:00:56,287 (Creature:166) INFO: mel_length_threshold = 32
+2023-01-10 14:00:56,287 (Creature:166) INFO: model_type = tacotron2
+2023-01-10 14:00:56,287 (Creature:166) INFO: num_save_intermediate_results = 1
+2023-01-10 14:00:56,287 (Creature:166) INFO: optimizer_params = {'decay_steps': 150000, 'end_learning_rate': 1e-05, 'initial_learning_rate': 0.0024842781420265567, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2023-01-10 14:00:56,287 (Creature:166) INFO: remove_short_samples = True
+2023-01-10 14:00:56,287 (Creature:166) INFO: save_interval_steps = 100
+2023-01-10 14:00:56,288 (Creature:166) INFO: schedule_decay_steps = 50000
+2023-01-10 14:00:56,288 (Creature:166) INFO: start_ratio_value = 0.5
+2023-01-10 14:00:56,288 (Creature:166) INFO: start_schedule_teacher_forcing = 200001
+2023-01-10 14:00:56,288 (Creature:166) INFO: tacotron2_params = {'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'attention_type': 'lsa', 'dataset': 'ljspeech', 'decoder_lstm_units': 1024, 'embedding_dropout_prob': 0.1, 'embedding_hidden_size': 512, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_lstm_units': 256, 'initializer_range': 0.02, 'n_conv_encoder': 5, 'n_conv_postnet': 5, 'n_lstm_decoder': 1, 'n_mels': 80, 'n_prenet_layers': 2, 'n_speakers': 1, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'prenet_units': 256, 'reduction_factor': 1}
+2023-01-10 14:00:56,288 (Creature:166) INFO: train_max_steps = 100
+2023-01-10 14:00:56,288 (Creature:166) INFO: use_fixed_shapes = True
+2023-01-10 14:00:56,288 (Creature:166) INFO: var_train_expr = None
+2023-01-10 14:00:56,288 (Creature:166) INFO: train_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/train/
+2023-01-10 14:00:56,288 (Creature:166) INFO: dev_dir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/../dump_ljspeech/valid/
+2023-01-10 14:00:56,288 (Creature:166) INFO: use_norm = 1
+2023-01-10 14:00:56,288 (Creature:166) INFO: outdir = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9
+2023-01-10 14:00:56,288 (Creature:166) INFO: config = /home/ludwig/projects/FInal Project/TensorFlowTTS/GA/./GA_Output/test5/gen_4/7e8efb3f-90a6-11ed-9f19-305a3adfd5f9/config.yaml
+2023-01-10 14:00:56,288 (Creature:166) INFO: resume = 
+2023-01-10 14:00:56,288 (Creature:166) INFO: verbose = True
+2023-01-10 14:00:56,288 (Creature:166) INFO: mixed_precision = False
+2023-01-10 14:00:56,288 (Creature:166) INFO: pretrained = 
+2023-01-10 14:00:56,288 (Creature:166) INFO: use_fal = False
+2023-01-10 14:00:56,288 (Creature:166) INFO: version = 0.0
+2023-01-10 14:00:56,288 (Creature:166) INFO: max_mel_length = 870
+2023-01-10 14:00:56,288 (Creature:166) INFO: max_char_length = 188
+2023-01-10 14:00:56,890 (tacotron_dataset:93) INFO: Using guided attention loss
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2023-01-10 14:10:58,182 (base_trainer:888) INFO: (Steps: 100) Start evaluation.
+25.25
+
+(Steps: 100) eval_stop_token_loss = 0.0073.
+(Steps: 100) eval_mel_loss_before = 0.3159.
+(Steps: 100) eval_mel_loss_after = 0.3892.
+(Steps: 100) eval_guided_attention_loss = 0.0021.
+12884901888
+12472877056
+2023-01-10 14:14:03,460 (base_trainer:901) INFO: (Steps: 100) Finished evaluation (20 steps per epoch).
+2023-01-10 14:14:03,463 (base_trainer:908) INFO: (Steps: 100) eval_stop_token_loss = 0.0075.
+2023-01-10 14:14:03,465 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_before = 0.3099.
+2023-01-10 14:14:03,467 (base_trainer:908) INFO: (Steps: 100) eval_mel_loss_after = 0.3817.
+2023-01-10 14:14:03,468 (base_trainer:908) INFO: (Steps: 100) eval_guided_attention_loss = 0.0022.
+2023-01-10 14:14:04,294 (base_trainer:173) INFO: Successfully saved checkpoint @ 100 steps.
+2023-01-10 14:14:10,925 (base_trainer:110) INFO: Finish training.
+{'stop_token_loss': '0.0073', 'mel_loss_before': '0.3159', 'mel_loss_after': '0.3892', 'guided_attention_loss': '0.0021', 'memory_usage': '98.6', 'cpu_usage': '16.4', 'gpu_usage': '0.9680226643880209'}
+{'24e7f76a-908f-11ed-867d-305a3adfd5f9': 1428.5714285714287, '24e7f7ca-908f-11ed-bfe5-305a3adfd5f9': 1428.5714285714287, '9233dc5b-909a-11ed-9f19-305a3adfd5f9': 1333.3333333333335, '76fb0389-90a0-11ed-9f19-305a3adfd5f9': 1265.8227848101264, '7e8efb3f-90a6-11ed-9f19-305a3adfd5f9': 1369.86301369863}
+[6, 9, 0, 2, 4]

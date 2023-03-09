@@ -1,0 +1,67 @@
+allow_cache: true
+batch_size: 32
+config: ./GA/GA_Output/gen_19_elite_copy.yaml
+dev_dir: ./dump_ljspeech/valid
+end_ratio_value: 0.0
+eval_interval_steps: 500
+format: npy
+gradient_accumulation_steps: 1
+hop_size: 126
+is_shuffle: true
+log_interval_steps: 200
+max_char_length: 189
+max_mel_length: 870
+mel_length_threshold: 32
+mixed_precision: false
+model_type: tacotron2
+num_save_intermediate_results: 1
+optimizer_params:
+  decay_steps: 150000
+  end_learning_rate: 1.0e-05
+  initial_learning_rate: 0.001
+  warmup_proportion: 0.02
+  weight_decay: 0.001
+outdir: ./GA/gene19_2
+pretrained: ''
+remove_short_samples: true
+resume: ./GA/gene19_2/checkpoints/ckpt-48000
+save_interval_steps: 2000
+schedule_decay_steps: 50000
+start_ratio_value: 0.5
+start_schedule_teacher_forcing: 200001
+tacotron2_params:
+  attention_dim: 161
+  attention_filters: 63
+  attention_kernel: 58
+  attention_type: lsa
+  dataset: ljspeech
+  decoder_lstm_units: 486
+  embedding_dropout_prob: 0.24695970403127845
+  embedding_hidden_size: 499
+  encoder_conv_activation: relu
+  encoder_conv_dropout_rate: 0.4971896168679598
+  encoder_conv_filters: 287
+  encoder_conv_kernel_sizes: 13
+  encoder_lstm_units: 342
+  initializer_range: 0.8817225730242142
+  n_conv_encoder: 3
+  n_conv_postnet: 5
+  n_lstm_decoder: 4
+  n_mels: 80
+  n_prenet_layers: 0
+  n_speakers: 1
+  postnet_conv_filters: 193
+  postnet_conv_kernel_sizes: 4
+  postnet_dropout_rate: 0.29541797636161055
+  prenet_activation: relu
+  prenet_dropout_rate: 0.21997899529505294
+  prenet_units: 295
+  reduction_factor: 1
+train_dir: ./dump_ljspeech/
+train_max_steps: 100000
+use_fal: false
+use_fixed_shapes: true
+use_norm: true
+var_train_expr: null
+verbose: 1
+version: '0.0'

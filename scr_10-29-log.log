@@ -1,0 +1,27 @@
+Script started on 2022-10-29 15:55:56+08:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="211" LINES="53"]
+(base) ]0;ludwig@ludwig-System-Product-Name: ~/projects/FInal Project/TensorFlowTTSludwig@ludwig-System-Product-Name:~/projects/FInal Project/TensorFlowTTS$ python tts_client_test.py[11Pcd tts_server/python tts_client_test.py[11Pcd tts_server/python tts_client_test.py[11Pcd tts_server/python tts_client_test.py[Kpython tts_client_test.py[11Pcd tts_server/python tts_server.py/tts_server.pyls[Kcd tts_server/ls[Kpython tts_server/tts_server.py.py[K[6Pcd tts_server/python tts_client_test.py[Kpython test.py
+2022-10-29 15:56:15.896349: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:15.906311: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:15.906801: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:15.907428: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-29 15:56:15.907871: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:15.908324: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:15.908815: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:16.417126: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:16.417613: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:16.418050: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 15:56:16.418445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10583 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5
+2022-10-29 15:56:24.015626: W tensorflow/core/grappler/costs/op_level_cost_estimator.cc:689] Error in PredictCost() for the op: op: "Softmax" attr { key: "T" value { type: DT_FLOAT } } inputs { dtype: DT_FLOAT shape { unknown_rank: true } } device { type: "GPU" vendor: "NVIDIA" model: "NVIDIA GeForce RTX 2060" frequency: 1680 num_cores: 34 environment { key: "architecture" value: "7.5" } environment { key: "cuda" value: "11020" } environment { key: "cudnn" value: "8100" } num_registers: 65536 l1_cache_size: 24576 l2_cache_size: 3145728 shared_memory_size_per_multiprocessor: 65536 memory_size: 11097800704 bandwidth: 336048000 } outputs { dtype: DT_FLOAT shape { unknown_rank: true } }
+2022-10-29 15:56:24.949767: I tensorflow/stream_executor/cuda/cuda_dnn.cc:366] Loaded cuDNN version 8600
+2022-10-29 15:56:25.499316: W tensorflow/stream_executor/gpu/asm_compiler.cc:111] *** WARNING *** You are using ptxas 11.0.194, which is older than 11.1. ptxas before 11.1 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You may not need to update to CUDA 11.1; cherry-picking the ptxas binary is often sufficient.
+Could not load symbol cublasGetSmCountTarget from libcublas.so.11. Error: /usr/local/cuda-11.0/lib64/libcublas.so.11: undefined symbol: cublasGetSmCountTarget
+['Learning analytics is a multi-disciplinary field involving machine learning, artificial intelligence, information retrieval, statistics, and visualization.', 'Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning.']
+(256512,)
+(261888,)
+(base) ]0;ludwig@ludwig-System-Product-Name: ~/projects/FInal Project/TensorFlowTTSludwig@ludwig-System-Product-Name:~/projects/FInal Project/TensorFlowTTS$ exit
+exit
+
+Script done on 2022-10-29 15:56:36+08:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,799 @@
+Script started on 2022-10-29 16:35:35+08:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="211" LINES="53"]
+(base) ]0;ludwig@ludwig-System-Product-Name: ~/projects/FInal Project/TensorFlowTTSludwig@ludwig-System-Product-Name:~/projects/FInal Project/TensorFlowTTS$ python examples/tacotron2/train_tacotron2.py \
+>   --train-dir ./dump_ljspeech/train/ \
+>   --dev-dir ./dump_ljspeech/valid/ \
+>   --outdir ./examples/tacotron2/exp3/train.tacotron2.v1/ \
+>   --config ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml \
+>   --use-norm 1 \
+>   --mixed_precision 0 \
+>   --resume ""
+2022-10-29 16:35:46.850863: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:46.879378: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:46.880036: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:49.709981: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-29 16:35:49.710569: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:49.711071: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:49.711493: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:50.531170: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:50.531647: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:50.532080: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:35:50.532778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10583 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5
+2022-10-29 16:36:02,595 (tacotron_dataset:93) INFO: Using guided attention loss
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: hop_size = 256
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: format = npy
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: model_type = tacotron2
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: tacotron2_params = {'dataset': 'ljspeech', 'embedding_hidden_size': 512, 'initializer_range': 0.02, 'embedding_dropout_prob': 0.1, 'n_speakers': 1, 'n_conv_encoder': 5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_lstm_units': 256, 'n_prenet_layers': 2, 'prenet_units': 256, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'n_lstm_decoder': 1, 'reduction_factor': 1, 'decoder_lstm_units': 1024, 'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'n_mels': 80, 'n_conv_postnet': 5, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'attention_type': 'lsa'}
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: batch_size = 32
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: remove_short_samples = True
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: allow_cache = True
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: mel_length_threshold = 32
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: is_shuffle = True
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: use_fixed_shapes = True
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: optimizer_params = {'initial_learning_rate': 0.001, 'end_learning_rate': 1e-05, 'decay_steps': 150000, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: gradient_accumulation_steps = 1
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: var_train_expr = None
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: train_max_steps = 10
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: save_interval_steps = 10
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: eval_interval_steps = 1
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: log_interval_steps = 1
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: start_schedule_teacher_forcing = 200001
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: start_ratio_value = 0.5
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: schedule_decay_steps = 50000
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: end_ratio_value = 0.0
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: num_save_intermediate_results = 1
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: train_dir = ./dump_ljspeech/train/
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: dev_dir = ./dump_ljspeech/valid/
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: use_norm = True
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: outdir = ./examples/tacotron2/exp3/train.tacotron2.v1/
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: config = ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: resume = 
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: verbose = 1
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: mixed_precision = False
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: pretrained = 
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: use_fal = False
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: version = 0.0
+2022-10-29 16:36:02,608 (train_tacotron2:449) INFO: max_mel_length = 870
+2022-10-29 16:36:02,609 (train_tacotron2:449) INFO: max_char_length = 188
+2022-10-29 16:36:03,293 (tacotron_dataset:93) INFO: Using guided attention loss
+2022-10-29 16:36:04.220105: I tensorflow/stream_executor/cuda/cuda_dnn.cc:366] Loaded cuDNN version 8600
+2022-10-29 16:36:05.317701: W tensorflow/stream_executor/gpu/asm_compiler.cc:111] *** WARNING *** You are using ptxas 11.0.194, which is older than 11.1. ptxas before 11.1 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You may not need to update to CUDA 11.1; cherry-picking the ptxas binary is often sufficient.
+Could not load symbol cublasGetSmCountTarget from libcublas.so.11. Error: /usr/local/cuda-11.0/lib64/libcublas.so.11: undefined symbol: cublasGetSmCountTarget
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2022-10-29 16:36:08.185837: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:766] AUTO sharding policy will apply DATA sharding policy as it failed to apply FILE sharding policy because of the following reason: Did not find a shardable source, walked to a node which is not a dataset: name: "FlatMapDataset/_3"
+op: "FlatMapDataset"
+input: "TensorDataset/_1"
+input: "Placeholder/_2"
+attr {
+  key: "Targuments"
+  value {
+    list {
+      type: DT_STRING
+    }
+  }
+}
+attr {
+  key: "_cardinality"
+  value {
+    i: -2
+  }
+}
+attr {
+  key: "f"
+  value {
+    func {
+      name: "__inference_Dataset_flat_map_flat_map_fn_31"
+    }
+  }
+}
+attr {
+  key: "metadata"
+  value {
+    s: "\n\020FlatMapDataset:1"
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+    }
+  }
+}
+attr {
+  key: "output_types"
+  value {
+    list {
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+    }
+  }
+}
+. Consider either turning off auto-sharding or switching the auto_shard_policy to DATA to shard this dataset. You can do this by creating a new `tf.data.Options()` object then setting `options.experimental_distribute.auto_shard_policy = AutoShardPolicy.DATA` before applying the options object to the dataset via `dataset.with_options(options)`.
+2022-10-29 16:36:08.204108: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:766] AUTO sharding policy will apply DATA sharding policy as it failed to apply FILE sharding policy because of the following reason: Did not find a shardable source, walked to a node which is not a dataset: name: "FlatMapDataset/_3"
+op: "FlatMapDataset"
+input: "TensorDataset/_1"
+input: "Placeholder/_2"
+attr {
+  key: "Targuments"
+  value {
+    list {
+      type: DT_STRING
+    }
+  }
+}
+attr {
+  key: "_cardinality"
+  value {
+    i: -2
+  }
+}
+attr {
+  key: "f"
+  value {
+    func {
+      name: "__inference_Dataset_flat_map_flat_map_fn_282"
+    }
+  }
+}
+attr {
+  key: "metadata"
+  value {
+    s: "\n\021FlatMapDataset:10"
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+    }
+  }
+}
+attr {
+  key: "output_types"
+  value {
+    list {
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+    }
+  }
+}
+. Consider either turning off auto-sharding or switching the auto_shard_policy to DATA to shard this dataset. You can do this by creating a new `tf.data.Options()` object then setting `options.experimental_distribute.auto_shard_policy = AutoShardPolicy.DATA` before applying the options object to the dataset via `dataset.with_options(options)`.
+[train]:   0%|                                                                                                                                                                              | 0/10 [00:00<?, ?it/s]2022-10-29 16:36:18.326432: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 5863 of 12445
+
+
+
+2022-10-29 16:36:27.159893: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:405] Shuffle buffer filled.
+[train]:  10%|████████████████▌                                                                                                                                                     | 1/10 [00:44<06:40, 44.52s/it]2022-10-29 16:36:52,760 (base_trainer:988) INFO: (Step: 1) train_stop_token_loss = 0.6975.
+2022-10-29 16:36:52,761 (base_trainer:988) INFO: (Step: 1) train_mel_loss_before = 0.5746.
+2022-10-29 16:36:52,762 (base_trainer:988) INFO: (Step: 1) train_mel_loss_after = 1.2804.
+2022-10-29 16:36:52,763 (base_trainer:988) INFO: (Step: 1) train_guided_attention_loss = 0.0071.
+2022-10-29 16:36:52,828 (base_trainer:888) INFO: (Steps: 1) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A[eval]: 0it [00:04, ?it/s]
+Traceback (most recent call last):
+  File "/home/ludwig/projects/FInal Project/TensorFlowTTS/examples/tacotron2/train_tacotron2.py", line 542, in <module>
+    main()
+  File "/home/ludwig/projects/FInal Project/TensorFlowTTS/examples/tacotron2/train_tacotron2.py", line 530, in main
+    trainer.fit(
+  File "/home/ludwig/projects/FInal Project/env/lib/python3.9/site-packages/tensorflow_tts/trainers/base_trainer.py", line 1010, in fit
+    self.run()
+  File "/home/ludwig/projects/FInal Project/env/lib/python3.9/site-packages/tensorflow_tts/trainers/base_trainer.py", line 104, in run
+    self._train_epoch()
+  File "/home/ludwig/projects/FInal Project/env/lib/python3.9/site-packages/tensorflow_tts/trainers/base_trainer.py", line 130, in _train_epoch
+    self._check_eval_interval()
+  File "/home/ludwig/projects/FInal Project/env/lib/python3.9/site-packages/tensorflow_tts/trainers/base_trainer.py", line 167, in _check_eval_interval
+    self._eval_epoch()
+  File "/home/ludwig/projects/FInal Project/env/lib/python3.9/site-packages/tensorflow_tts/trainers/base_trainer.py", line 899, in _eval_epoch
+    self.generate_and_save_intermediate_result(batch)
+  File "/home/ludwig/projects/FInal Project/TensorFlowTTS/examples/tacotron2/train_tacotron2.py", line 226, in generate_and_save_intermediate_result
+    self.save_loss_record()
+  File "/home/ludwig/projects/FInal Project/TensorFlowTTS/examples/tacotron2/train_tacotron2.py", line 215, in save_loss_record
+    msg = msg + "\n"+ f"(Steps: {self.steps}) eval_{key} = {self.eval_metrics[key].result():.4f}."
+UnboundLocalError: local variable 'msg' referenced before assignment
+[train]:  10%|████████████████▌                                                                                                                                                     | 1/10 [00:50<07:38, 50.91s/it]
+^C
+(base) ]0;ludwig@ludwig-System-Product-Name: ~/projects/FInal Project/TensorFlowTTSludwig@ludwig-System-Product-Name:~/projects/FInal Project/TensorFlowTTS$ ^C
+(base) ]0;ludwig@ludwig-System-Product-Name: ~/projects/FInal Project/TensorFlowTTSludwig@ludwig-System-Product-Name:~/projects/FInal Project/TensorFlowTTS$ python examples/tacotron2/train_tacotron2.py   --train-dir ./dump_ljspeech/train/   --dev-dir ./dump_ljspeech/valid/   --outdir ./examples/tacotron2/exp3/train.tacotron2.v1/   --config ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml   --use-norm 1   --mixed_precision 0   --resume ""
+2022-10-29 16:37:37.363928: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:37.389780: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:37.390419: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:40.204323: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-29 16:37:40.205222: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:40.205700: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:40.206123: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:41.019202: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:41.019650: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:41.020055: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-10-29 16:37:41.020565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10583 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5
+2022-10-29 16:37:53,974 (tacotron_dataset:93) INFO: Using guided attention loss
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: hop_size = 256
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: format = npy
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: model_type = tacotron2
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: tacotron2_params = {'dataset': 'ljspeech', 'embedding_hidden_size': 512, 'initializer_range': 0.02, 'embedding_dropout_prob': 0.1, 'n_speakers': 1, 'n_conv_encoder': 5, 'encoder_conv_filters': 512, 'encoder_conv_kernel_sizes': 5, 'encoder_conv_activation': 'relu', 'encoder_conv_dropout_rate': 0.5, 'encoder_lstm_units': 256, 'n_prenet_layers': 2, 'prenet_units': 256, 'prenet_activation': 'relu', 'prenet_dropout_rate': 0.5, 'n_lstm_decoder': 1, 'reduction_factor': 1, 'decoder_lstm_units': 1024, 'attention_dim': 128, 'attention_filters': 32, 'attention_kernel': 31, 'n_mels': 80, 'n_conv_postnet': 5, 'postnet_conv_filters': 512, 'postnet_conv_kernel_sizes': 5, 'postnet_dropout_rate': 0.1, 'attention_type': 'lsa'}
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: batch_size = 32
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: remove_short_samples = True
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: allow_cache = True
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: mel_length_threshold = 32
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: is_shuffle = True
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: use_fixed_shapes = True
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: optimizer_params = {'initial_learning_rate': 0.001, 'end_learning_rate': 1e-05, 'decay_steps': 150000, 'warmup_proportion': 0.02, 'weight_decay': 0.001}
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: gradient_accumulation_steps = 1
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: var_train_expr = None
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: train_max_steps = 10
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: save_interval_steps = 10
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: eval_interval_steps = 1
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: log_interval_steps = 1
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: start_schedule_teacher_forcing = 200001
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: start_ratio_value = 0.5
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: schedule_decay_steps = 50000
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: end_ratio_value = 0.0
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: num_save_intermediate_results = 1
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: train_dir = ./dump_ljspeech/train/
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: dev_dir = ./dump_ljspeech/valid/
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: use_norm = True
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: outdir = ./examples/tacotron2/exp3/train.tacotron2.v1/
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: config = ./examples/tacotron2/conf/tacotron2.v1_test_2.yaml
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: resume = 
+2022-10-29 16:37:53,987 (train_tacotron2:450) INFO: verbose = 1
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: mixed_precision = False
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: pretrained = 
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: use_fal = False
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: version = 0.0
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: max_mel_length = 870
+2022-10-29 16:37:53,988 (train_tacotron2:450) INFO: max_char_length = 188
+2022-10-29 16:37:54,548 (tacotron_dataset:93) INFO: Using guided attention loss
+2022-10-29 16:37:55.448742: I tensorflow/stream_executor/cuda/cuda_dnn.cc:366] Loaded cuDNN version 8600
+2022-10-29 16:37:56.536254: W tensorflow/stream_executor/gpu/asm_compiler.cc:111] *** WARNING *** You are using ptxas 11.0.194, which is older than 11.1. ptxas before 11.1 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You may not need to update to CUDA 11.1; cherry-picking the ptxas binary is often sufficient.
+Could not load symbol cublasGetSmCountTarget from libcublas.so.11. Error: /usr/local/cuda-11.0/lib64/libcublas.so.11: undefined symbol: cublasGetSmCountTarget
+Model: "tacotron2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ encoder (TFTacotronEncoder)  multiple                 8218624   
+                                                                 
+ decoder_cell (TFTacotronDec  multiple                 18246402  
+ oderCell)                                                       
+                                                                 
+ post_net (TFTacotronPostnet  multiple                 5460480   
+ )                                                               
+                                                                 
+ residual_projection (Dense)  multiple                 41040     
+                                                                 
+=================================================================
+Total params: 31,966,546
+Trainable params: 31,956,306
+Non-trainable params: 10,240
+_________________________________________________________________
+2022-10-29 16:37:59.389441: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:766] AUTO sharding policy will apply DATA sharding policy as it failed to apply FILE sharding policy because of the following reason: Did not find a shardable source, walked to a node which is not a dataset: name: "FlatMapDataset/_3"
+op: "FlatMapDataset"
+input: "TensorDataset/_1"
+input: "Placeholder/_2"
+attr {
+  key: "Targuments"
+  value {
+    list {
+      type: DT_STRING
+    }
+  }
+}
+attr {
+  key: "_cardinality"
+  value {
+    i: -2
+  }
+}
+attr {
+  key: "f"
+  value {
+    func {
+      name: "__inference_Dataset_flat_map_flat_map_fn_31"
+    }
+  }
+}
+attr {
+  key: "metadata"
+  value {
+    s: "\n\020FlatMapDataset:1"
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+    }
+  }
+}
+attr {
+  key: "output_types"
+  value {
+    list {
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+    }
+  }
+}
+. Consider either turning off auto-sharding or switching the auto_shard_policy to DATA to shard this dataset. You can do this by creating a new `tf.data.Options()` object then setting `options.experimental_distribute.auto_shard_policy = AutoShardPolicy.DATA` before applying the options object to the dataset via `dataset.with_options(options)`.
+2022-10-29 16:37:59.401056: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:766] AUTO sharding policy will apply DATA sharding policy as it failed to apply FILE sharding policy because of the following reason: Did not find a shardable source, walked to a node which is not a dataset: name: "FlatMapDataset/_3"
+op: "FlatMapDataset"
+input: "TensorDataset/_1"
+input: "Placeholder/_2"
+attr {
+  key: "Targuments"
+  value {
+    list {
+      type: DT_STRING
+    }
+  }
+}
+attr {
+  key: "_cardinality"
+  value {
+    i: -2
+  }
+}
+attr {
+  key: "f"
+  value {
+    func {
+      name: "__inference_Dataset_flat_map_flat_map_fn_282"
+    }
+  }
+}
+attr {
+  key: "metadata"
+  value {
+    s: "\n\021FlatMapDataset:10"
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+      shape {
+        unknown_rank: true
+      }
+    }
+  }
+}
+attr {
+  key: "output_types"
+  value {
+    list {
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+      type: DT_STRING
+    }
+  }
+}
+. Consider either turning off auto-sharding or switching the auto_shard_policy to DATA to shard this dataset. You can do this by creating a new `tf.data.Options()` object then setting `options.experimental_distribute.auto_shard_policy = AutoShardPolicy.DATA` before applying the options object to the dataset via `dataset.with_options(options)`.
+[train]:   0%|                                                                                                                                                                              | 0/10 [00:00<?, ?it/s]2022-10-29 16:38:09.537538: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 8884 of 12445
+2022-10-29 16:38:19.789668: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 11580 of 12445
+2022-10-29 16:38:25.317675: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:405] Shuffle buffer filled.
+[train]:  10%|████████████████▌                                                                                                                                                     | 1/10 [00:51<07:42, 51.38s/it]2022-10-29 16:38:50,796 (base_trainer:988) INFO: (Step: 1) train_stop_token_loss = 0.6941.
+2022-10-29 16:38:50,798 (base_trainer:988) INFO: (Step: 1) train_mel_loss_before = 0.6468.
+2022-10-29 16:38:50,798 (base_trainer:988) INFO: (Step: 1) train_mel_loss_after = 1.3044.
+2022-10-29 16:38:50,799 (base_trainer:988) INFO: (Step: 1) train_guided_attention_loss = 0.0057.
+2022-10-29 16:38:50,850 (base_trainer:888) INFO: (Steps: 1) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 1) eval_stop_token_loss = 2.9093.
+(Steps: 1) eval_mel_loss_before = 0.7523.
+(Steps: 1) eval_mel_loss_after = 1.4882.
+(Steps: 1) eval_guided_attention_loss = 0.0067.
+
+[eval]: 1it [00:35, 35.40s/it][A
+[eval]: 2it [00:39, 16.98s/it][A
+[eval]: 3it [00:43, 11.14s/it][A
+[eval]: 4it [00:45,  7.48s/it][A
+[eval]: 5it [00:47,  5.39s/it][A
+[eval]: 6it [00:48,  4.12s/it][A
+[eval]: 7it [00:50,  3.31s/it][A
+[eval]: 8it [00:52,  2.79s/it][A
+[eval]: 9it [00:53,  2.46s/it][A
+[eval]: 10it [00:55,  2.20s/it][A
+[eval]: 11it [00:57,  2.01s/it][A
+[eval]: 12it [00:59,  2.09s/it][A
+[eval]: 13it [01:01,  1.96s/it][A
+[eval]: 14it [01:02,  1.88s/it][A
+[eval]: 15it [01:04,  1.82s/it][A
+[eval]: 16it [01:06,  1.78s/it][A
+[eval]: 17it [01:07,  1.79s/it][A
+[eval]: 18it [01:09,  1.78s/it][A
+[eval]: 19it [01:11,  1.76s/it][A
+[eval]: 20it [01:13,  1.76s/it][A[eval]: 20it [01:13,  3.66s/it]
+2022-10-29 16:40:04,028 (base_trainer:901) INFO: (Steps: 1) Finished evaluation (20 steps per epoch).
+2022-10-29 16:40:04,030 (base_trainer:908) INFO: (Steps: 1) eval_stop_token_loss = 2.9190.
+2022-10-29 16:40:04,030 (base_trainer:908) INFO: (Steps: 1) eval_mel_loss_before = 0.7569.
+2022-10-29 16:40:04,031 (base_trainer:908) INFO: (Steps: 1) eval_mel_loss_after = 1.4932.
+2022-10-29 16:40:04,031 (base_trainer:908) INFO: (Steps: 1) eval_guided_attention_loss = 0.0069.
+[train]:  20%|█████████████████████████████████▏                                                                                                                                    | 2/10 [02:08<08:51, 66.45s/it]2022-10-29 16:40:07,819 (base_trainer:988) INFO: (Step: 2) train_stop_token_loss = 2.9562.
+2022-10-29 16:40:07,820 (base_trainer:988) INFO: (Step: 2) train_mel_loss_before = 0.7616.
+2022-10-29 16:40:07,821 (base_trainer:988) INFO: (Step: 2) train_mel_loss_after = 1.4915.
+2022-10-29 16:40:07,821 (base_trainer:988) INFO: (Step: 2) train_guided_attention_loss = 0.0064.
+2022-10-29 16:40:07,826 (base_trainer:888) INFO: (Steps: 2) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 2) eval_stop_token_loss = 0.6088.
+(Steps: 2) eval_mel_loss_before = 0.6057.
+(Steps: 2) eval_mel_loss_after = 1.3634.
+(Steps: 2) eval_guided_attention_loss = 0.0083.
+
+
+[eval]: 1it [00:29, 29.05s/it][A
+[eval]: 2it [00:30, 12.85s/it][A
+[eval]: 3it [00:32,  7.78s/it][A
+[eval]: 4it [00:33,  5.29s/it][A
+[eval]: 5it [00:35,  3.98s/it][A
+[eval]: 6it [00:37,  3.17s/it][A
+[eval]: 7it [00:38,  2.64s/it][A
+[eval]: 8it [00:41,  2.64s/it][A
+[eval]: 9it [00:42,  2.29s/it][A
+[eval]: 10it [00:44,  2.09s/it][A
+[eval]: 11it [00:46,  2.15s/it][A
+[eval]: 12it [00:48,  2.07s/it][A
+[eval]: 13it [00:50,  2.02s/it][A
+[eval]: 14it [00:52,  1.92s/it][A
+[eval]: 15it [00:53,  1.79s/it][A
+[eval]: 16it [00:55,  1.94s/it][A
+[eval]: 17it [00:57,  1.84s/it][A
+[eval]: 18it [00:59,  1.97s/it][A
+[eval]: 19it [01:01,  1.98s/it][A
+[eval]: 20it [01:03,  1.86s/it][A[eval]: 20it [01:03,  3.17s/it]
+2022-10-29 16:41:11,239 (base_trainer:901) INFO: (Steps: 2) Finished evaluation (20 steps per epoch).
+2022-10-29 16:41:11,241 (base_trainer:908) INFO: (Steps: 2) eval_stop_token_loss = 0.6219.
+2022-10-29 16:41:11,242 (base_trainer:908) INFO: (Steps: 2) eval_mel_loss_before = 0.6335.
+2022-10-29 16:41:11,244 (base_trainer:908) INFO: (Steps: 2) eval_mel_loss_after = 1.3612.
+2022-10-29 16:41:11,246 (base_trainer:908) INFO: (Steps: 2) eval_guided_attention_loss = 0.0071.
+[train]:  30%|█████████████████████████████████████████████████▊                                                                                                                    | 3/10 [03:15<07:46, 66.70s/it]2022-10-29 16:41:14,820 (base_trainer:988) INFO: (Step: 3) train_stop_token_loss = 0.6365.
+2022-10-29 16:41:14,821 (base_trainer:988) INFO: (Step: 3) train_mel_loss_before = 0.6061.
+2022-10-29 16:41:14,822 (base_trainer:988) INFO: (Step: 3) train_mel_loss_after = 1.3582.
+2022-10-29 16:41:14,822 (base_trainer:988) INFO: (Step: 3) train_guided_attention_loss = 0.0072.
+2022-10-29 16:41:14,826 (base_trainer:888) INFO: (Steps: 3) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 3) eval_stop_token_loss = 0.2429.
+(Steps: 3) eval_mel_loss_before = 0.6686.
+(Steps: 3) eval_mel_loss_after = 1.2696.
+(Steps: 3) eval_guided_attention_loss = 0.0076.
+
+[eval]: 1it [00:29, 29.16s/it][A
+[eval]: 2it [00:30, 12.96s/it][A
+[eval]: 3it [00:33,  8.07s/it][A
+[eval]: 4it [00:35,  5.74s/it][A
+[eval]: 5it [00:36,  4.25s/it][A
+[eval]: 6it [00:38,  3.34s/it][A
+[eval]: 7it [00:40,  3.02s/it][A
+[eval]: 8it [00:42,  2.73s/it][A
+[eval]: 9it [00:44,  2.44s/it][A
+[eval]: 10it [00:46,  2.22s/it][A
+[eval]: 11it [00:48,  2.14s/it][A
+[eval]: 12it [00:50,  2.04s/it][A
+[eval]: 13it [00:51,  1.91s/it][A
+[eval]: 14it [00:53,  1.97s/it][A
+[eval]: 15it [00:56,  2.09s/it][A
+[eval]: 16it [00:58,  2.00s/it][A
+[eval]: 17it [00:59,  1.92s/it][A
+[eval]: 18it [01:01,  2.00s/it][A
+[eval]: 19it [01:03,  1.91s/it][A
+[eval]: 20it [01:05,  2.01s/it][A[eval]: 20it [01:05,  3.29s/it]
+2022-10-29 16:42:20,723 (base_trainer:901) INFO: (Steps: 3) Finished evaluation (20 steps per epoch).
+2022-10-29 16:42:20,725 (base_trainer:908) INFO: (Steps: 3) eval_stop_token_loss = 0.2504.
+2022-10-29 16:42:20,726 (base_trainer:908) INFO: (Steps: 3) eval_mel_loss_before = 0.6596.
+2022-10-29 16:42:20,726 (base_trainer:908) INFO: (Steps: 3) eval_mel_loss_after = 1.2702.
+2022-10-29 16:42:20,728 (base_trainer:908) INFO: (Steps: 3) eval_guided_attention_loss = 0.0072.
+[train]:  40%|██████████████████████████████████████████████████████████████████▍                                                                                                   | 4/10 [04:25<06:47, 67.88s/it]2022-10-29 16:42:24,508 (base_trainer:988) INFO: (Step: 4) train_stop_token_loss = 0.2793.
+2022-10-29 16:42:24,509 (base_trainer:988) INFO: (Step: 4) train_mel_loss_before = 0.6179.
+2022-10-29 16:42:24,509 (base_trainer:988) INFO: (Step: 4) train_mel_loss_after = 1.2785.
+2022-10-29 16:42:24,509 (base_trainer:988) INFO: (Step: 4) train_guided_attention_loss = 0.0086.
+2022-10-29 16:42:24,514 (base_trainer:888) INFO: (Steps: 4) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 4) eval_stop_token_loss = 0.0730.
+(Steps: 4) eval_mel_loss_before = 0.7090.
+(Steps: 4) eval_mel_loss_after = 1.0223.
+(Steps: 4) eval_guided_attention_loss = 0.0071.
+
+[eval]: 1it [00:26, 26.39s/it][A
+[eval]: 2it [00:27, 11.77s/it][A
+[eval]: 3it [00:29,  7.11s/it][A
+[eval]: 4it [00:31,  4.91s/it][A
+[eval]: 5it [00:32,  3.68s/it][A
+[eval]: 6it [00:34,  2.96s/it][A
+[eval]: 7it [00:35,  2.50s/it][A
+[eval]: 8it [00:37,  2.18s/it][A
+[eval]: 9it [00:38,  1.98s/it][A
+[eval]: 10it [00:40,  1.84s/it][A
+[eval]: 11it [00:41,  1.76s/it][A
+[eval]: 12it [00:43,  1.70s/it][A
+[eval]: 13it [00:44,  1.64s/it][A
+[eval]: 14it [00:46,  1.59s/it][A
+[eval]: 15it [00:50,  2.48s/it][A
+[eval]: 16it [00:52,  2.20s/it][A
+[eval]: 17it [00:54,  2.25s/it][A
+[eval]: 18it [00:56,  2.06s/it][A
+[eval]: 19it [00:57,  1.90s/it][A
+[eval]: 20it [01:00,  2.14s/it][A[eval]: 20it [01:00,  3.03s/it]
+2022-10-29 16:43:25,135 (base_trainer:901) INFO: (Steps: 4) Finished evaluation (20 steps per epoch).
+2022-10-29 16:43:25,138 (base_trainer:908) INFO: (Steps: 4) eval_stop_token_loss = 0.0717.
+2022-10-29 16:43:25,138 (base_trainer:908) INFO: (Steps: 4) eval_mel_loss_before = 0.7284.
+2022-10-29 16:43:25,139 (base_trainer:908) INFO: (Steps: 4) eval_mel_loss_after = 1.0214.
+2022-10-29 16:43:25,139 (base_trainer:908) INFO: (Steps: 4) eval_guided_attention_loss = 0.0073.
+[train]:  50%|███████████████████████████████████████████████████████████████████████████████████                                                                                   | 5/10 [05:29<05:33, 66.61s/it]2022-10-29 16:43:28,865 (base_trainer:988) INFO: (Step: 5) train_stop_token_loss = 0.0749.
+2022-10-29 16:43:28,866 (base_trainer:988) INFO: (Step: 5) train_mel_loss_before = 0.7170.
+2022-10-29 16:43:28,867 (base_trainer:988) INFO: (Step: 5) train_mel_loss_after = 1.0199.
+2022-10-29 16:43:28,867 (base_trainer:988) INFO: (Step: 5) train_guided_attention_loss = 0.0080.
+2022-10-29 16:43:28,873 (base_trainer:888) INFO: (Steps: 5) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 5) eval_stop_token_loss = 0.0649.
+(Steps: 5) eval_mel_loss_before = 0.6498.
+(Steps: 5) eval_mel_loss_after = 0.8837.
+(Steps: 5) eval_guided_attention_loss = 0.0068.
+
+[eval]: 1it [00:29, 29.39s/it][A
+[eval]: 2it [00:30, 12.97s/it][A
+[eval]: 3it [00:33,  8.04s/it][A
+[eval]: 4it [00:34,  5.53s/it][A
+[eval]: 5it [00:36,  4.29s/it][A
+[eval]: 6it [00:38,  3.40s/it][A
+[eval]: 7it [00:40,  2.90s/it][A
+[eval]: 8it [00:42,  2.57s/it][A
+[eval]: 9it [00:44,  2.37s/it][A
+[eval]: 10it [00:45,  2.14s/it][A
+[eval]: 11it [00:47,  2.00s/it][A
+[eval]: 12it [00:49,  1.97s/it][A
+[eval]: 13it [00:52,  2.24s/it][A
+[eval]: 14it [00:54,  2.14s/it][A
+[eval]: 15it [00:55,  1.99s/it][A
+[eval]: 16it [00:57,  2.02s/it][A
+[eval]: 17it [00:59,  2.05s/it][A
+[eval]: 18it [01:01,  1.89s/it][A
+[eval]: 19it [01:03,  1.87s/it][A
+[eval]: 20it [01:05,  1.84s/it][A[eval]: 20it [01:05,  3.26s/it]
+2022-10-29 16:44:33,988 (base_trainer:901) INFO: (Steps: 5) Finished evaluation (20 steps per epoch).
+2022-10-29 16:44:33,990 (base_trainer:908) INFO: (Steps: 5) eval_stop_token_loss = 0.0651.
+2022-10-29 16:44:33,992 (base_trainer:908) INFO: (Steps: 5) eval_mel_loss_before = 0.6490.
+2022-10-29 16:44:33,993 (base_trainer:908) INFO: (Steps: 5) eval_mel_loss_after = 0.8827.
+2022-10-29 16:44:33,995 (base_trainer:908) INFO: (Steps: 5) eval_guided_attention_loss = 0.0073.
+[train]:  60%|███████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                  | 6/10 [06:38<04:29, 67.32s/it]2022-10-29 16:44:37,567 (base_trainer:988) INFO: (Step: 6) train_stop_token_loss = 0.0782.
+2022-10-29 16:44:37,567 (base_trainer:988) INFO: (Step: 6) train_mel_loss_before = 0.5598.
+2022-10-29 16:44:37,567 (base_trainer:988) INFO: (Step: 6) train_mel_loss_after = 0.8605.
+2022-10-29 16:44:37,568 (base_trainer:988) INFO: (Step: 6) train_guided_attention_loss = 0.0107.
+2022-10-29 16:44:37,572 (base_trainer:888) INFO: (Steps: 6) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 6) eval_stop_token_loss = 0.0447.
+(Steps: 6) eval_mel_loss_before = 0.6388.
+(Steps: 6) eval_mel_loss_after = 0.7731.
+(Steps: 6) eval_guided_attention_loss = 0.0080.
+
+[eval]: 1it [00:28, 28.53s/it][A
+[eval]: 2it [00:30, 12.78s/it][A
+[eval]: 3it [00:31,  7.64s/it][A
+[eval]: 4it [00:33,  5.26s/it][A
+[eval]: 5it [00:35,  3.95s/it][A
+[eval]: 6it [00:36,  3.26s/it][A
+[eval]: 7it [00:38,  2.80s/it][A
+[eval]: 8it [00:40,  2.48s/it][A
+[eval]: 9it [00:42,  2.35s/it][A
+[eval]: 10it [00:44,  2.24s/it][A
+[eval]: 11it [00:46,  2.15s/it][A
+[eval]: 12it [00:48,  2.09s/it][A
+[eval]: 13it [00:50,  1.96s/it][A
+[eval]: 14it [00:51,  1.87s/it][A
+[eval]: 15it [00:53,  1.84s/it][A
+[eval]: 16it [00:56,  2.01s/it][A
+[eval]: 17it [00:57,  1.94s/it][A
+[eval]: 18it [00:59,  1.81s/it][A
+[eval]: 19it [01:00,  1.72s/it][A
+[eval]: 20it [01:02,  1.67s/it][A[eval]: 20it [01:02,  3.12s/it]
+2022-10-29 16:45:39,975 (base_trainer:901) INFO: (Steps: 6) Finished evaluation (20 steps per epoch).
+2022-10-29 16:45:39,976 (base_trainer:908) INFO: (Steps: 6) eval_stop_token_loss = 0.0447.
+2022-10-29 16:45:39,977 (base_trainer:908) INFO: (Steps: 6) eval_mel_loss_before = 0.6285.
+2022-10-29 16:45:39,977 (base_trainer:908) INFO: (Steps: 6) eval_mel_loss_after = 0.7701.
+2022-10-29 16:45:39,978 (base_trainer:908) INFO: (Steps: 6) eval_guided_attention_loss = 0.0074.
+[train]:  70%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                 | 7/10 [07:44<03:20, 66.86s/it]2022-10-29 16:45:43,477 (base_trainer:988) INFO: (Step: 7) train_stop_token_loss = 0.0452.
+2022-10-29 16:45:43,477 (base_trainer:988) INFO: (Step: 7) train_mel_loss_before = 0.6523.
+2022-10-29 16:45:43,477 (base_trainer:988) INFO: (Step: 7) train_mel_loss_after = 0.7797.
+2022-10-29 16:45:43,478 (base_trainer:988) INFO: (Step: 7) train_guided_attention_loss = 0.0066.
+2022-10-29 16:45:43,482 (base_trainer:888) INFO: (Steps: 7) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 7) eval_stop_token_loss = 0.0442.
+(Steps: 7) eval_mel_loss_before = 0.5861.
+(Steps: 7) eval_mel_loss_after = 0.7706.
+(Steps: 7) eval_guided_attention_loss = 0.0070.
+
+[eval]: 1it [00:26, 26.24s/it][A
+[eval]: 2it [00:27, 11.70s/it][A
+[eval]: 3it [00:29,  7.06s/it][A
+[eval]: 4it [00:30,  4.89s/it][A
+[eval]: 5it [00:32,  3.73s/it][A
+[eval]: 6it [00:34,  3.08s/it][A
+[eval]: 7it [00:37,  3.11s/it][A
+[eval]: 8it [00:39,  2.63s/it][A
+[eval]: 9it [00:40,  2.32s/it][A
+[eval]: 10it [00:42,  2.17s/it][A
+[eval]: 11it [00:44,  2.15s/it][A
+[eval]: 12it [00:46,  1.96s/it][A
+[eval]: 13it [00:47,  1.85s/it][A
+[eval]: 14it [00:49,  1.77s/it][A
+[eval]: 15it [00:51,  1.73s/it][A
+[eval]: 16it [00:52,  1.78s/it][A
+[eval]: 17it [00:54,  1.73s/it][A
+[eval]: 18it [00:56,  1.67s/it][A
+[eval]: 19it [00:57,  1.64s/it][A
+[eval]: 20it [00:59,  1.61s/it][A[eval]: 20it [00:59,  2.96s/it]
+2022-10-29 16:46:42,683 (base_trainer:901) INFO: (Steps: 7) Finished evaluation (20 steps per epoch).
+2022-10-29 16:46:42,685 (base_trainer:908) INFO: (Steps: 7) eval_stop_token_loss = 0.0440.
+2022-10-29 16:46:42,686 (base_trainer:908) INFO: (Steps: 7) eval_mel_loss_before = 0.6042.
+2022-10-29 16:46:42,688 (base_trainer:908) INFO: (Steps: 7) eval_mel_loss_after = 0.7780.
+2022-10-29 16:46:42,689 (base_trainer:908) INFO: (Steps: 7) eval_guided_attention_loss = 0.0073.
+[train]:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                 | 8/10 [08:46<02:11, 65.55s/it]2022-10-29 16:46:46,224 (base_trainer:988) INFO: (Step: 8) train_stop_token_loss = 0.0433.
+2022-10-29 16:46:46,225 (base_trainer:988) INFO: (Step: 8) train_mel_loss_before = 0.5674.
+2022-10-29 16:46:46,225 (base_trainer:988) INFO: (Step: 8) train_mel_loss_after = 0.7699.
+2022-10-29 16:46:46,226 (base_trainer:988) INFO: (Step: 8) train_guided_attention_loss = 0.0085.
+2022-10-29 16:46:46,229 (base_trainer:888) INFO: (Steps: 8) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 8) eval_stop_token_loss = 0.0312.
+(Steps: 8) eval_mel_loss_before = 0.6606.
+(Steps: 8) eval_mel_loss_after = 0.8144.
+(Steps: 8) eval_guided_attention_loss = 0.0069.
+
+[eval]: 1it [00:24, 24.96s/it][A
+[eval]: 2it [00:26, 11.17s/it][A
+[eval]: 3it [00:27,  6.76s/it][A
+[eval]: 4it [00:29,  4.71s/it][A
+[eval]: 5it [00:31,  3.61s/it][A
+[eval]: 6it [00:32,  2.91s/it][A
+[eval]: 7it [00:34,  2.49s/it][A
+[eval]: 8it [00:35,  2.20s/it][A
+[eval]: 9it [00:37,  1.99s/it][A
+[eval]: 10it [00:39,  2.04s/it][A
+[eval]: 11it [00:41,  1.89s/it][A
+[eval]: 12it [00:42,  1.77s/it][A
+[eval]: 13it [00:44,  1.78s/it][A
+[eval]: 14it [00:46,  1.73s/it][A
+[eval]: 15it [00:47,  1.62s/it][A
+[eval]: 16it [00:49,  1.61s/it][A
+[eval]: 17it [00:51,  1.98s/it][A
+[eval]: 18it [00:53,  1.85s/it][A
+[eval]: 19it [00:54,  1.76s/it][A
+[eval]: 20it [00:56,  1.74s/it][A[eval]: 20it [00:56,  2.84s/it]
+2022-10-29 16:47:42,960 (base_trainer:901) INFO: (Steps: 8) Finished evaluation (20 steps per epoch).
+2022-10-29 16:47:42,963 (base_trainer:908) INFO: (Steps: 8) eval_stop_token_loss = 0.0321.
+2022-10-29 16:47:42,965 (base_trainer:908) INFO: (Steps: 8) eval_mel_loss_before = 0.6641.
+2022-10-29 16:47:42,967 (base_trainer:908) INFO: (Steps: 8) eval_mel_loss_after = 0.8176.
+2022-10-29 16:47:42,968 (base_trainer:908) INFO: (Steps: 8) eval_guided_attention_loss = 0.0073.
+[train]:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                | 9/10 [09:47<01:03, 63.90s/it]2022-10-29 16:47:46,496 (base_trainer:988) INFO: (Step: 9) train_stop_token_loss = 0.0308.
+2022-10-29 16:47:46,497 (base_trainer:988) INFO: (Step: 9) train_mel_loss_before = 0.6398.
+2022-10-29 16:47:46,497 (base_trainer:988) INFO: (Step: 9) train_mel_loss_after = 0.8088.
+2022-10-29 16:47:46,497 (base_trainer:988) INFO: (Step: 9) train_guided_attention_loss = 0.0078.
+2022-10-29 16:47:46,501 (base_trainer:888) INFO: (Steps: 9) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 9) eval_stop_token_loss = 0.0310.
+(Steps: 9) eval_mel_loss_before = 0.5979.
+(Steps: 9) eval_mel_loss_after = 0.7128.
+(Steps: 9) eval_guided_attention_loss = 0.0075.
+
+[eval]: 1it [00:25, 25.06s/it][A
+[eval]: 2it [00:26, 11.20s/it][A
+[eval]: 3it [00:28,  6.77s/it][A
+[eval]: 4it [00:29,  4.70s/it][A
+[eval]: 5it [00:31,  3.56s/it][A
+[eval]: 6it [00:32,  2.88s/it][A
+[eval]: 7it [00:34,  2.46s/it][A
+[eval]: 8it [00:35,  2.16s/it][A
+[eval]: 9it [00:37,  2.08s/it][A
+[eval]: 10it [00:39,  1.92s/it][A
+[eval]: 11it [00:40,  1.80s/it][A
+[eval]: 12it [00:42,  1.71s/it][A
+[eval]: 13it [00:43,  1.67s/it][A
+[eval]: 14it [00:45,  1.70s/it][A
+[eval]: 15it [00:47,  1.64s/it][A
+[eval]: 16it [00:48,  1.61s/it][A
+[eval]: 17it [00:50,  1.63s/it][A
+[eval]: 18it [00:51,  1.62s/it][A
+[eval]: 19it [00:53,  1.60s/it][A
+[eval]: 20it [00:55,  1.58s/it][A[eval]: 20it [00:55,  2.75s/it]
+2022-10-29 16:48:41,556 (base_trainer:901) INFO: (Steps: 9) Finished evaluation (20 steps per epoch).
+2022-10-29 16:48:41,558 (base_trainer:908) INFO: (Steps: 9) eval_stop_token_loss = 0.0308.
+2022-10-29 16:48:41,560 (base_trainer:908) INFO: (Steps: 9) eval_mel_loss_before = 0.6329.
+2022-10-29 16:48:41,561 (base_trainer:908) INFO: (Steps: 9) eval_mel_loss_after = 0.7348.
+2022-10-29 16:48:41,563 (base_trainer:908) INFO: (Steps: 9) eval_guided_attention_loss = 0.0074.
+[train]: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [10:45<00:00, 62.28s/it]2022-10-29 16:48:45,127 (base_trainer:988) INFO: (Step: 10) train_stop_token_loss = 0.0312.
+2022-10-29 16:48:45,127 (base_trainer:988) INFO: (Step: 10) train_mel_loss_before = 0.6570.
+2022-10-29 16:48:45,128 (base_trainer:988) INFO: (Step: 10) train_mel_loss_after = 0.7521.
+2022-10-29 16:48:45,128 (base_trainer:988) INFO: (Step: 10) train_guided_attention_loss = 0.0069.
+2022-10-29 16:48:45,133 (base_trainer:888) INFO: (Steps: 10) Start evaluation.
+
+[eval]: 0it [00:00, ?it/s][A
+(Steps: 10) eval_stop_token_loss = 0.0479.
+(Steps: 10) eval_mel_loss_before = 0.5648.
+(Steps: 10) eval_mel_loss_after = 0.6393.
+(Steps: 10) eval_guided_attention_loss = 0.0077.
+
+[eval]: 1it [00:25, 25.24s/it][A
+[eval]: 2it [00:26, 11.29s/it][A
+[eval]: 3it [00:28,  6.85s/it][A
+[eval]: 4it [00:30,  4.86s/it][A
+[eval]: 5it [00:31,  3.63s/it][A
+[eval]: 6it [00:33,  2.92s/it][A
+[eval]: 7it [00:34,  2.48

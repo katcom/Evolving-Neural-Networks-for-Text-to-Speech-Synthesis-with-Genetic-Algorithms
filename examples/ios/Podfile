@@ -1,6 +1,0 @@
-platform :ios, '14.0'
-
-target 'TF_TTS_Demo' do
-  pod 'TensorFlowLiteSwift'
-  pod 'TensorFlowLiteSelectTfOps'
-end
